@@ -1,39 +1,188 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-  <img style="width: 305px; height: 305px; left: 54px; top: 260px; position: absolute" src="./HCI_image/main_room.png">
-  <div style="width: 294px; left: 60px; top: 152px; position: absolute; text-align: center; color: #34495E; font-size: 30px; font-family: Pretendard; font-weight: 700; line-height: 41.04px; word-wrap: break-word">Our Family <br/>Home</div>
-  <a href="Today_Mission_list4.html">
-    <div style="width: 354px; height: 60px; left: 30px; top: 690px; position: absolute; background: #CDD5AE; border-radius: 30px"></div>
-    <div style="left: 140px; top: 709px; position: absolute; text-align: center; color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Today Mission</div>
-  </a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnityHome</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-  <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-  <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: white"></div>
-  
-  <!--manu bar div-->
-  <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-    <a href="main.html">
-    <img style="width: 34px; height: 34px; left: 4.25px; top: 2.83px; position: absolute" src="./HCI_image/bar_home_green.png"
-    onclick="window.location.href='http://127.0.0.1:5500/main.html'">
-    <a href="Today_Mission_list4.html">
-      <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list.png">
-    </a>
-    <a href="store_page_1.html">
-      <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png">
-    </a>
-    <a href="mypage.html">
-    <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-    onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
-  </a>
-  </div>
+      .mainPage {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: white;
+        border-radius: 30px;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
 
-  <!--manu plus bar div-->
-  <div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-    <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-    <a href="Today_Mission_list4.html">
-      <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-        <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-        <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
+      .mainPage img {
+        width: 73.67%; /* 305px / 414px */
+        height: auto; /* Maintain aspect ratio */
+        left: 50%;
+        top: 29%;
+        position: absolute;
+        transform: translateX(-50%);
+      }
+
+      .mainPage .title {
+        width: 71.01%; /* 294px / 414px */
+        left: 50%;
+        top: 17%;
+        position: absolute;
+        text-align: center;
+        color: #34495e;
+        font-size: 7.25vw; /* 30px / 414px */
+        font-family: Pretendard;
+        font-weight: 700;
+        line-height: 1.37;
+        transform: translateX(-50%);
+        word-wrap: break-word;
+      }
+
+      .mainPage .todayMission {
+        width: 85.51%; /* 354px / 414px */
+        height: 6.7%; /* 60px / 896px */
+        left: 50%;
+        top: 77%;
+        position: absolute;
+        background: #cdd5ae;
+        border-radius: 30px;
+        transform: translateX(-50%);
+      }
+
+      .mainPage .todayMissionText {
+        left: 50%;
+        top: 80%;
+        position: absolute;
+        text-align: center;
+        color: white;
+        font-size: 4.35vw; /* 18px / 414px */
+        font-family: Montserrat;
+        font-weight: 700;
+        transform: translateX(-50%);
+        word-wrap: break-word;
+      }
+
+      .mainPage .menuBar {
+        width: 100%;
+        height: 10.94%; /* 98px / 896px */
+        left: 0;
+        top: 89%;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25);
+      }
+
+      .mainPage .menuBar img {
+        width: 8.21%; /* 34px / 414px */
+        height: auto; /* Maintain aspect ratio */
+        position: absolute;
+      }
+
+      .mainPage .menuBar .home {
+        left: 1%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .mainPage .menuBar .list {
+        left: 18%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .mainPage .menuBar .market {
+        left: 60%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .mainPage .menuBar .my {
+        left: 78%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .mainPage .menuPlusBar {
+        width: 17.87%; /* 74px / 414px */
+        height: auto;
+        left: 50%;
+        top: 87%;
+        position: absolute;
+        background: #cdd5ae;
+        border-radius: 9999px;
+        transform: translateX(-50%);
+      }
+
+      .mainPage .menuPlusBar div {
+        width: 70.27%; /* 52px / 74px */
+        height: auto;
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      .mainPage .menuPlusBar div div {
+        width: 100%;
+        height: 4px;
+        background: white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .mainPage .menuPlusBar div div:first-child {
+        top: 45%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      .mainPage .menuPlusBar div div:last-child {
+        top: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainPage">
+      <img src="./HCI_image/main_room.png" />
+      <div class="title">Our Family <br />Home</div>
+      <a href="Today_Mission_list4.html">
+        <div class="todayMission"></div>
+        <div class="todayMissionText">Today Mission</div>
+      </a>
+
+      <div class="menuBar"></div>
+      <div class="menuBar">
+        <a href="main.html">
+          <img class="home" src="./HCI_image/bar_home_green.png" />
+        </a>
+        <a href="Today_Mission_list4.html">
+          <img class="list" src="./HCI_image/bar_list.png" />
+        </a>
+        <a href="store_page_1.html">
+          <img class="market" src="./HCI_image/bar_market.png" />
+        </a>
+        <a href="mypage.html">
+          <img class="my" src="./HCI_image/bar_my.png" />
+        </a>
       </div>
-    </a>
-  </div>
-</div>
+
+      <div class="menuPlusBar">
+        <a href="Today_Mission_list4.html">
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
