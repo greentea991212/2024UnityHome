@@ -1,73 +1,153 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-    <div style="left: 128px; top: 51px; position: absolute; text-align: center; color: #34495E; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Today Mission</div>
-    <div style="width: 38px; height: 38px; left: 30px; top: 46px; position: absolute">
-      <img  style="width: 34px; height: 34px; left: 0px; top: 4.75px; position: absolute" src="./HCI_image/back.png"
-      onclick="window.location.href='http://127.0.0.1:5500/main.html'">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Mission</title>
+    <link rel="stylesheet" href="menuBar_list_green.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .Today_Mission {
+          position: absolute;
+          width: 159px;
+          height: 27px;
+          left: 128px;
+          top: 51px;
+
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          font-size: 22px;
+          font-size: 22px;
+          font-size: 22px;
+          font-size: 22px;
+          font-size: 22px;
+          line-height: 27px;
+          /* identical to box height */
+          text-align: center;
+          letter-spacing: -0.3px;
+
+          color: #34495E;
+        }
+
+        .backclick {
+          /* arrow-left-circle */
+          position: absolute;
+          width: 38px;
+          height: 38px;
+          left: 30px;
+          top: 46px;
+        }
+
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        .mainPage .title {
+            width: 71.01%; /* 294px / 414px */
+            left: 50%;
+            top: 17%;
+            position: absolute;
+            text-align: center;
+            color: #34495e;
+            font-size: 7.25vw; /* 30px / 414px */
+            font-family: Pretendard;
+            font-weight: 700;
+            line-height: 1.37;
+            transform: translateX(-50%);
+            word-wrap: break-word;
+        }
+
+        .mainPage .todayMission_Love_Letter {
+            width: 85.51%; /* 354px / 414px */
+            height: 16%; /* 140px / 896px */
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            background: rgba(238, 231, 219, 0.35);
+            border-radius: 30px;
+            transform: translate(-50%, -50%);
+        }
+
+        .mainPage .missionText_Love_Letter {
+            left: 25px;
+            top: 22px;
+            position: absolute;
+            color: black;
+            font-size: 22px;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .missionPoint_Love_Letter {
+            left: 267px;
+            top: 99px;
+            position: absolute;
+            color: black;
+            font-size: 17px;
+            font-family: Montserrat;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+    <div class="todayMission_Love_Letter">
+        <div class="missionText_Love_Letter">Love Letter</div>
+        <div class="missionPoint_Love_Letter">50 point</div>
     </div>
 
-    <!-- mission_loveletter -->
-    <a href="mission_page_loveletter0.html">
-      <div style="width: 354px; height: 140px; left: 30px; top: 128px; position: absolute">
-        <img style="width: 34px; height: 34px; left: 317px; top: 16px; position: absolute" src="./HCI_image/arrow.png">
-        <div style="width: 354px; height: 140px; left: 0px; top: 0px; position: absolute; background: rgba(238, 231, 219, 0.35); border-radius: 30px"></div>
-        <div style="left: 25px; top: 22px; position: absolute; color: black; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Love Letter</div>
-        <div style="left: 267px; top: 99px; position: absolute; color: black; font-size: 17px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">50 point</div>
-      </div>
-    </a>
 
-    <!-- mission_photo family tree -->
-    <div style="width: 354px; height: 140px; left: 29px; top: 295px; position: absolute">
-        <img style="width: 34px; height: 34px; left: 317px; top: 16px; position: absolute" src="./HCI_image/arrow.png">
+    <!-- Additional missions go here -->
 
-      <a href="mission_page_Photo_Family_Tree0.html">
-        <div class="Photo" style="width: 354px; height: 140px; left: 0px; top: 0px; position: absolute; background: rgba(238, 231, 219, 0.35); border-radius: 30px"></div>
-      </a>  
-        <div style="left: 25px; top: 22px; position: absolute; color: black; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Photo Family Tree</div>
-        <div style="left: 267px; top: 99px; position: absolute; color: black; font-size: 17px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">120 point</div>
-      </div>
+    <div class="Today_Mission">Today Mission</div>4
 
-
-    <!-- mission stars in the Night -->
-    <a href="mission_page_Stars_in_the_Night0.html">
-      <div style="width: 354px; height: 140px; left: 30px; top: 462px; position: absolute">
-        <img style="width: 34px; height: 34px; left: 317px; top: 16px; position: absolute" src="./HCI_image/arrow.png">
-        <div style="width: 354px; height: 140px; left: 0px; top: 0px; position: absolute; background: rgba(238, 231, 219, 0.35); border-radius: 30px"></div>
-        <div style="left: 25px; top: 22px; position: absolute; color: black; font-size: 20px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Stars in the Night</div>
-        <div style="left: 267px; top: 99px; position: absolute; color: black; font-size: 17px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">110 point</div>
-      </div>
-    </a>
-
-
-
-
-
-    <a href="main.html">
-      <div style="width: 354px; height: 60px; left: 30px; top: 690px; position: absolute; background: #CDD5AE; border-radius: 30px"></div>
-      <div style="left: 132px; top: 709px; position: absolute; text-align: center; color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Go to my house</div>
-    </a>
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: white"></div>
-    <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
+    <div class="backclick">
+        <img class="backclick" src="./HCI_image/back.png" />
     </div>
 
-    <!--manu bar div-->
-    <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-        <img style="width: 34px; height: 34px; left: 4.25px; top: 2.83px; position: absolute" src="./HCI_image/bar_home.png"
-        onclick="window.location.href='http://127.0.0.1:5500/main.html'">
-        <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list_green.png"
-        onclick="window.location.href='http://127.0.0.1:5500/Today_Mission_list4.html'">
-        <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png"
-        onclick="window.location.href='http://127.0.0.1:5500/store_page_1.html'">
-        <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-        onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
+    <div class="menuBar">
+      <a href="main.html">
+        <img class="home" src="./HCI_image/bar_home.png" />
+      </a>
+      <a href="Today_Mission_list4.html">
+        <img class="list" src="./HCI_image/bar_list_green.png" />
+      </a>
+      <a href="store_page_1.html">
+        <img class="market" src="./HCI_image/bar_market.png" />
+      </a>
+      <a href="mypage.html">
+        <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
+      </a>
     </div>
-
-  <!--manu plus bar div-->
-  <div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-    <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-    <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-      <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-      <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-    </div>
-  </div>
 </div>
+</body>
+</html>
+
+
+
+
