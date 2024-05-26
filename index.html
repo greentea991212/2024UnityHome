@@ -80,74 +80,14 @@
         position: absolute;
         background: rgba(255, 255, 255, 0.75);
         box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
       }
 
       .mainPage .menuBar img {
         width: 8.21%; /* 34px / 414px */
         height: auto; /* Maintain aspect ratio */
-        position: absolute;
-      }
-
-      .mainPage .menuBar .home {
-        left: 1%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .mainPage .menuBar .list {
-        left: 18%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .mainPage .menuBar .market {
-        left: 60%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .mainPage .menuBar .my {
-        left: 78%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .mainPage .menuPlusBar {
-        width: 17.87%; /* 74px / 414px */
-        height: 17.87%; /* 74px / 414px */
-        left: 50%;
-        top: 85%;
-        position: absolute;
-        background: #cdd5ae;
-        border-radius: 9999px;
-        transform: translateX(-50%);
-      }
-
-      .mainPage .menuPlusBar div {
-        width: 70.27%; /* 52px / 74px */
-        height: 70.27%; /* 52px / 74px */
-        left: 50%;
-        top: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-      }
-
-      .mainPage .menuPlusBar div div {
-        width: 100%;
-        height: 4px;
-        background: white;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .mainPage .menuPlusBar div div:first-child {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(90deg);
-      }
-
-      .mainPage .menuPlusBar div div:last-child {
-        top: 50%;
       }
     </style>
   </head>
@@ -160,7 +100,6 @@
         <div class="todayMissionText">Today Mission</div>
       </a>
 
-      <div class="menuBar"></div>
       <div class="menuBar">
         <a href="main.html">
           <img class="home" src="./HCI_image/bar_home_green.png" />
@@ -173,15 +112,6 @@
         </a>
         <a href="mypage.html">
           <img class="my" src="./HCI_image/bar_my.png" />
-        </a>
-      </div>
-
-      <div class="menuPlusBar">
-        <a href="Today_Mission_list4.html">
-          <div>
-            <div></div>
-            <div></div>
-          </div>
         </a>
       </div>
     </div>
