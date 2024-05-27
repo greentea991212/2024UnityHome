@@ -1,45 +1,190 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-  <div style="left: 144px; top: 51px; position: absolute; text-align: center; color: #34495E; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Love Letter</div> 
-  <div style="width: 354px; height: 453px; left: 30px; top: 180px; position: absolute; background: rgba(238, 231, 219, 0.35); border-radius: 30px"></div>
-  <!-- back icon -->
-  <div style="width: 38px; height: 38px; left: 30px; top: 46px; position: absolute">
-    <img style="width: 34px; height: 34px; left: 0px; top: 4.75px; position: absolute" src="./HCI_image/back.png"
-    onclick="window.location.href='http://127.0.0.1:5500/mission_page_loveletter0.html'">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter Mission Page 1</title>
+    <link rel="stylesheet" href="menuBar.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-<!-- love letter intro -->
-    <div style="width: 350px; left: 32px; top: 123px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 300; line-height: 20px; word-wrap: break-word">A program where parents write love letters to their children and children write love letters to their parents.</div>
-    <div style="width: 187px; height: 153px; left: 113px; top: 319px; position: absolute">
-      <div style="width: 187px; left: 0px; top: 19px; position: absolute; text-align: center; color: black; font-size: 35px; font-family: Pretendard; font-weight: 700; line-height: 47.88px; word-wrap: break-word">09:51.43</div>
-      <img style="width: 68px; height: 68px; left: 57px; top: 85px; position: absolute" src="./HCI_image/sand_clock.png">
-      <div style="left: 47px; top: 0px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: Pretendard; font-weight: 400; line-height: 24.62px; word-wrap: break-word">Time Limit:</div>
-    </div>
-    <a href="mission_page_loveletter2_add_photo.html">
-      <div style="width: 354px; height: 60px; left: 30px; top: 690px; position: absolute; background: #CDD5AE; border-radius: 30px"></div>
-      <div style="left: 178px; top: 709px; position: absolute; text-align: center; color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Finish</div>
+
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        .mainPage .missionTitle {
+            left: 34.78%; /* 144px / 414px */
+            top: 5.69%; /* 51px / 896px */
+            position: absolute;
+            text-align: center;
+            color: #34495E;
+            font-size: 5.31vw; /* 22px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .missionContainer {
+            width: 85.51%; /* 354px / 414px */
+            height: 50.56%; /* 453px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 20.09%; /* 180px / 896px */
+            position: absolute;
+            background: rgba(238, 231, 219, 0.35);
+            border-radius: 30px;
+        }
+
+        .backclick {
+            /* arrow-left-circle */
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            left: 7.25%; /* 30px / 414px */
+            top: 5.13%; /* 46px / 896px */
+        }
+
+        .mainPage .introText {
+            width: 84.54%; /* 350px / 414px */
+            left: 7.73%; /* 32px / 414px */
+            top: 13.73%; /* 123px / 896px */
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 3.38vw; /* 14px / 414px */
+            font-family: Roboto;
+            font-weight: 300;
+            line-height: 4.83vw; /* 20px / 414px */
+            word-wrap: break-word;
+        }
+
+        .mainPage .timeContainer {
+            width: 45.17%; /* 187px / 414px */
+            height: 17.08%; /* 153px / 896px */
+            left: 27.29%; /* 113px / 414px */
+            top: 35.60%; /* 319px / 896px */
+            position: absolute;
+        }
+
+        .mainPage .timeText {
+            width: 100%;
+            left: 0;
+            top: 12.42%;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 8.45vw; /* 35px / 414px */
+            font-family: Pretendard;
+            font-weight: 700;
+            line-height: 11.56vw; /* 47.88px / 414px */
+            word-wrap: break-word;
+        }
+
+        .mainPage .timeIcon {
+            width: 36.36%; /* 68px / 187px */
+            height: 44.44%; /* 68px / 153px */
+            left: 50%; /* 57px / 187px */
+            top: 55.56%; /* 85px / 153px */
+            position: absolute;
+        }
+
+        .mainPage .timeLimitText {
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 4.35vw; /* 18px / 414px */
+            font-family: Pretendard;
+            font-weight: 400;
+            line-height: 5.95vw; /* 24.62px / 414px */
+            word-wrap: break-word;
+        }
+
+        .mainPage .FinishButtonContainer {
+            width: 85.51%; /* 354px / 414px */
+            height: 6.70%; /* 60px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 77.01%; /* 690px / 896px */
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .FinishButtonText {
+            left: 40%;
+            top: 28%;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.35vw; /* 18px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+    <div class="missionTitle">Love Letter</div>
+
+    <a href="mission_page_loveletter0.html">
+      <div class="backclick">
+        <img class="backclick" src="./HCI_image/back.png" />
+      </div>
     </a>
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: white"></div>
-    <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-    </div>
-    
-<!--manu bar div-->
-  <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-    <img style="width: 34px; height: 34px; left: 4.25px; top: 2.83px; position: absolute" src="./HCI_image/bar_home.png"
-    onclick="window.location.href='http://127.0.0.1:5500/main.html'">
-    <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list_green.png"
-    onclick="window.location.href='http://127.0.0.1:5500/Today_Mission_list4.html'">
-    <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png"
-    onclick="window.location.href='http://127.0.0.1:5500/store_page_1.html'">
-    <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-    onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
-  </div>
 
-<!--manu plus bar div-->
-  <div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-    <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-    <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-      <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-      <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
+    <div class="missionContainer"></div>
+    <div class="introText">A program where parents write love letters to their children and children write love letters to their parents.</div>
+
+    <div class="timeContainer">
+        <div class="timeText">09:51.43</div>
+        <img class="timeIcon" src="./HCI_image/sand_clock.png">
+        <div class="timeLimitText">Time Limit:</div>
     </div>
+
+    <a href="mission_page_loveletter2_add_photo.html">
+        <div class="FinishButtonContainer">
+          <div class="FinishButtonText">Finish</div>
+        </div>
+    </a>
+
+  <!-- menuBar -->
+  <div class="menuBar">
+    <a href="index.html">
+      <img class="home" src="./HCI_image/bar_home.png" />
+    </a>
+    <a href="Today_Mission_list.html">
+      <img class="list" src="./HCI_image/bar_list_green.png" />
+    </a>
+    <a href="store_page_1.html">
+      <img class="market" src="./HCI_image/bar_market.png" />
+    </a>
+    <a href="mypage.html">
+      <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
+    </a>
   </div>
+</div>
+</body>
+</html>
