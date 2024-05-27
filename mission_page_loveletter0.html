@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Letter Mission</title>
-    <link rel="stylesheet" href="menuBar_list_green.css">
+    <link rel="stylesheet" href="menuBar.css">
     <style>
-        body,
-        html {
+        body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
         }
+
 
         .mainPage {
             width: 100%;
@@ -23,6 +23,16 @@
             overflow: hidden;
             box-sizing: border-box;
         }
+
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+        
 
         .mainPage .missionTitle {
             left: 34.78%; /* 144px / 414px */
@@ -49,17 +59,10 @@
         .backclick {
           /* arrow-left-circle */
           position: absolute;
-          width: 38px;
-          height: 38px;
+          width: 35px;
+          height: 35px;
           left: 30px;
-          top: 40px;
-        }
-
-        .mainPage .backIcon img {
-            width: 8.21%; /* 34px / 414px */
-            height: 3.79%; /* 34px / 896px */
-            position: absolute;
-            top: 0.53%; /* 4.75px / 896px */
+          top: 5%;
         }
 
         .mainPage .introText {
@@ -118,7 +121,7 @@
             width: 78.02%; /* 323px / 414px */
             height: 29.82%; /* 267.24px / 896px */
             left: 3.86%; /* 16px / 414px */
-            top: 6.94%; /* 62.22px / 896px */
+            top: 13%; /* 62.22px / 896px */
             position: absolute;
             font-size: 3.14vw; /* 13px / 414px */
             font-family: Roboto;
@@ -152,37 +155,52 @@
     </style>
 </head>
 <body>
-    <div class="mainPage">
-        <div class="missionTitle">Love Letter</div>
+<div class="mainPage">
+    <div class="missionTitle">Love Letter</div>
 
-        <a href="Today_Mission_list.html">
-          <div class="backclick">
-            <img class="backclick" src="./HCI_image/back.png" />
-          </div>
-        </a>
-
-        <div class="missionContainer"></div>
-        <div class="introText">A program where parents write love letters to their children and children write love letters to their parents.</div>
-        <img class="letterIcon" src="./HCI_image/letter.png">
-        <div class="guidelinesTitle">Guidelines</div>
-        <div class="materialsContainer">
-            <div class="materialsBorder"></div>
-            <div class="materialsText">
-                <span style="color: black; font-weight: 700;">Materials</span>
-                <span style="color: black;">: Writing utensils, stationery, open hearts.<br/></span>
-                <span style="color: black; font-weight: 700;">Time required:</span>
-                <span style="color: black;"> Approximately 10 minutes.<br/><br/></span>
-                <span style="color: black; font-weight: 700;">Program Objectives:<br/></span>
-                <span style="color: black;">1. Strengthen emotional bonds among family members.<br/>2. Facilitate communication.<br/>3. Express gratitude.<br/><br/></span>
-                <span style="color: black; font-weight: 700;">Program Effects:<br/></span>
-                <span style="color: black;">1. Enhance relationships among family members.<br/>2. Improve emotional stability.<br/>3. Foster self-awareness and personal growth.</span>
-            </div>
-        </div>
-        <a href="mission_page_loveletter1.html">
-            <div class="startButtonContainer"></div>
-            <div class="startButtonText">START</div>
-        </a>
-
+    <a href="Today_Mission_list.html">
+      <div class="backclick">
+        <img class="backclick" src="./HCI_image/back.png" />
       </div>
+    </a>
+
+    <div class="missionContainer"></div>
+    <div class="introText">A program where parents write love letters to their children and children write love letters to their parents.</div>
+    <img class="letterIcon" src="./HCI_image/letter.png">
+    <div class="guidelinesTitle">Guidelines</div>
+    <div class="materialsContainer">
+        <div class="materialsBorder"></div>
+        <div class="materialsText">
+            <span style="color: black; font-weight: 700;">Materials</span>
+            <span style="color: black;">: Writing utensils, stationery, open hearts.<br/></span>
+            <span style="color: black; font-weight: 700;">Time required:</span>
+            <span style="color: black;"> Approximately 10 minutes.<br/><br/></span>
+            <span style="color: black; font-weight: 700;">Program Objectives:<br/></span>
+            <span style="color: black;">1. Strengthen emotional bonds among family members.<br/>2. Facilitate communication.<br/>3. Express gratitude.<br/><br/></span>
+            <span style="color: black; font-weight: 700;">Program Effects:<br/></span>
+            <span style="color: black;">1. Enhance relationships among family members.<br/>2. Improve emotional stability.<br/>3. Foster self-awareness and personal growth.</span>
+        </div>
+    </div>
+    <a href="mission_page_loveletter1.html">
+        <div class="startButtonContainer"></div>
+        <div class="startButtonText">START</div>
+    </a>
+
+  <!-- menuBar -->
+  <div class="menuBar">
+    <a href="index.html">
+      <img class="home" src="./HCI_image/bar_home.png" />
+    </a>
+    <a href="Today_Mission_list.html">
+      <img class="list" src="./HCI_image/bar_list_green.png" />
+    </a>
+    <a href="store_page_1.html">
+      <img class="market" src="./HCI_image/bar_market.png" />
+    </a>
+    <a href="mypage.html">
+      <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
+    </a>
+  </div>
+</div>
 </body>
 </html>
