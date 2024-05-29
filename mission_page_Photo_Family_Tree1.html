@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Family Tree Mission</title>
+    <title>Photo Family Tree Preparation</title>
     <link rel="stylesheet" href="menuBar.css">
     <style>
         body, html {
@@ -23,181 +23,103 @@
             box-sizing: border-box;
         }
 
-        .mainPage img {
-            width: 73.67%; /* 305px / 414px */
-            height: auto; /* Maintain aspect ratio */
-            left: 50%;
-            top: 29%;
-            position: absolute;
-            transform: translateX(-50%);
-        }
-
-        .mainPage .missionTitle {
-            left: 30%;
-            top: 5.69%; /* 51px / 896px */
+        .mainPage .stepTitle {
+            left: 31.64%; /* 131px / 414px */
+            top: 43.08%; /* 386px / 896px */
             position: absolute;
             text-align: center;
-            color: #34495E;
-            font-size: 5.31vw; /* 22px / 414px */
+            color: black;
+            font-size: 6.04vw; /* 25px / 414px */
             font-family: Montserrat;
             font-weight: 700;
             word-wrap: break-word;
-        }
-
-        .mainPage .missionContainer {
-            width: 85.51%; /* 354px / 414px */
-            height: 16.63%; /* 149px / 896px */
-            left: 7.25%; /* 30px / 414px */
-            top: 14.29%; /* 128px / 896px */
-            position: absolute;
-            background: rgba(238, 231, 219, 0.35);
-            border-radius: 30px;
-        }
-
-        .backclick {
-          /* arrow-left-circle */
-          position: absolute;
-          width: 50px;
-          height: 50px;
-          left: 7.25%;
-          top: 4.5%;
         }
 
         .mainPage .introText {
-            width: 57.49%; /* 238px / 414px */
-            left: 31.64%; /* 131px / 414px */
-            top: 19.20%; /* 172px / 896px */
+            width: 78.50%; /* 325px / 414px */
+            left: 6.15%; /* 53px / 414px */
+            top: 55.58%; /* 498px / 896px */
             position: absolute;
             text-align: center;
             color: black;
-            font-size: 3.14vw; /* 13px / 414px */
+            font-size: 3.62vw; /* 15px / 414px */
             font-family: Roboto;
             font-weight: 400;
-            line-height: 4.81vw; /* 20px / 414px */
+            line-height: 5.31vw; /* 22px / 414px */
             word-wrap: break-word;
         }
 
-        .mainPage .letterIcon {
-            width: 13.53%; /* 56px / 414px */
-            height: 6.25%; /* 56px / 896px */
-            left: 20%;
-            top: 19.20%; /* 172px / 896px */
-            position: absolute;
-        }
-
-        .mainPage .guidelinesTitle {
-            width: 78.50%; /* 325px / 414px */
-            left: 10.63%; /* 44px / 414px */
-            top: 35.83%; /* 321px / 896px */
+        .mainPage .nextButton {
+            left: 44.20%; /* 183px / 414px */
+            top: 91.41%; /* 819px / 896px */
             position: absolute;
             text-align: center;
-            color: black;
-            font-size: 4.10vw; /* 17px / 414px */
-            font-family: Roboto;
-            font-weight: 700;
-            line-height: 4.81vw; /* 20px / 414px */
-            word-wrap: break-word;
-        }
-
-        .mainPage .materialsContainer {
-            width: 85.51%; /* 354px / 414px */
-            height: 39.84%; /* 357px / 896px */
-            left: 7.25%; /* 30px / 414px */
-            top: 34.26%; /* 307px / 896px */
-            position: absolute;
-        }
-
-        .mainPage .materialsBorder {
-            width: 100%;
-            height: 110%;
-            position: absolute;
-            border-radius: 30px;
-            border: 1px #CDD5AE solid;
-        }
-
-        .mainPage .materialsText {
-            width: 78.02%; /* 323px / 414px */
-            height: 29.82%; /* 267.24px / 896px */
-            left: 3.86%; /* 16px / 414px */
-            top: 13%; /* 62.22px / 896px */
-            position: absolute;
-            font-size: 3.14vw; /* 13px / 414px */
-            font-family: Roboto;
-            line-height: 4.81vw; /* 20px / 414px */
-            word-wrap: break-word;
-        }
-
-       .mainPage .startButtonContainer {
-            width: 90%;
-            height: 6.70%; /* 60px / 896px */
-            left: 7.25%; /* 30px / 414px */
-            top: 80%; /* 690px / 896px */
-            position: absolute;
-            background: #CDD5AE;
-            border-radius: 30px;
-        }
-
-        .mainPage .startButtonText {
-            left: 40%;
-            top: 28%;
-            position: absolute;
-            text-align: center;
-            color: white;
-            font-size: 4.35vw; /* 18px / 414px */
+            color: #CDD5AE;
+            font-size: 4.83vw; /* 20px / 414px */
             font-family: Montserrat;
-            font-weight: 700;
+            font-weight: 500;
             word-wrap: break-word;
         }
+
+        .mainPage .backIcon {
+            width: 9.18%; /* 38px / 414px */
+            height: 4.24%; /* 38px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 5.13%; /* 46px / 896px */
+            position: absolute;
+        }
+
+
+        .mainPage .pagination {
+            width: 28.02%; 
+            height: 1.79%; 
+            left: 36.23%; 
+            top: 73.45%; 
+            position: absolute;
+        }
+
+        .pagination div {
+            width: 10%; /* 16px / 414px */
+            height: 100%;
+            position: absolute;
+            border-radius: 9999px;
+        }
+
+        .pagination .active {
+            background: #CDD5AE;
+        }
+
+        .pagination .inactive {
+            background: #C4C4C4;
+        }
+
+        .pagination div:nth-child(1) { left: 0; }
+        .pagination div:nth-child(2) { left: 21.55%; /* 25px / 116px */ }
+        .pagination div:nth-child(3) { left: 43.10%; /* 50px / 116px */ }
+        .pagination div:nth-child(4) { left: 64.66%; /* 75px / 116px */ }
+        .pagination div:nth-child(5) { left: 86.21%; /* 100px / 116px */ }
     </style>
 </head>
 <body>
 <div class="mainPage">
-    <div class="missionTitle">Photo Family Tree</div>
-
-    <a href="Today_Mission_list.html">
-      <div class="backclick">
-        <img class="backclick" src="./HCI_image/back.png" />
-      </div>
-    </a>
-
-    <div class="missionContainer"></div>
-    <div class="introText">Creating and Decorating a Family Tree with Gathered Family Members' Photos</div>
-    <img class="letterIcon" src="HCI_image/tree.png">
-    <div class="guidelinesTitle">Guidelines</div>
-    <div class="materialsContainer">
-        <div class="materialsBorder"></div>
-        <div class="materialsText">
-            <span style="color: #655753; font-weight: 700;">Materials</span>
-            <span style="color: #655753;">: Family photos, colored pencils, large paper, stickers (optional) etc.<br/></span>
-            <span style="color: #655753; font-weight: 700;">Time required:</span>
-            <span style="color: #655753;"> Approximately 2 hours.<br/><br/></span>
-            <span style="color: #655753; font-weight: 700;">Program Objectives:<br/></span>
-            <span style="color: #655753;">1. Family History Tracking<br/>2. Preserving Family Memories<br/>3. Strengthening Family Bonds<br/><br/></span>
-            <span style="color: #655753; font-weight: 700;">Program Effects:<br/></span>
-            <span style="color: #655753;">1. Enhancement of Family Unity<br/>2. Recording Family History<br/>3. Strengthening Emotional Connections within the Family</span>
-        </div>
-    </div>
     <a href="mission_page_Photo_Family_Tree1.html">
-      <div class="startButtonContainer">
-        <div class="startButtonText">Start</div>
+        <div class="backIcon">
+            <img class="backIcon" src="./HCI_image/back.png" />
+        </div>
+    </a>
+    <div class="stepTitle">Step 1<br>Preparation</div>
+    <div class="introText">Gather photos of family members.<br>These can range from childhood to recent pictures.<br><br>Also, prepare the materials you will need to create the family tree, such as large paper or fabric, markers, glue, scissors, etc.</div>
+    <img class="letterIcon" src="HCI_image/tree.png" style="width: 57.97%; /* 240px / 414px */ height: auto; left: 19.32%; /* 80px / 414px */ top: 12.72%; /* 114px / 896px */ position: absolute;">
+    <a href="mission_page_Photo_Family_Tree2.html">
+        <div class="nextButton">Next</div>
+    </a>
+    <div class="pagination">
+        <div class="active"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
     </div>
-    </a>
-
-    <!-- menuBar -->
-  <div class="menuBar">
-    <a href="index.html">
-      <img class="home" src="./HCI_image/bar_home.png" />
-    </a>
-    <a href="Today_Mission_list.html">
-      <img class="list" src="./HCI_image/bar_list_green.png" />
-    </a>
-    <a href="store_page_1.html">
-      <img class="market" src="./HCI_image/bar_market.png" />
-    </a>
-    <a href="mypage.html">
-      <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
-    </a>
-  </div>
 </div>
 </body>
 </html>
