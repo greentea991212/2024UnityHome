@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Family Tree Mission</title>
     <link rel="stylesheet" href="menuBar.css">
-    <link rel="stylesheet" href="mission_start_button.css">
     <style>
         body, html {
             margin: 0;
@@ -13,6 +12,7 @@
             width: 100%;
             height: 100%;
         }
+
 
         .mainPage {
             width: 100%;
@@ -24,7 +24,17 @@
             box-sizing: border-box;
         }
 
-        .missionTitle {
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+        
+
+        .mainPage .missionTitle {
             left: 34.78%; /* 144px / 414px */
             top: 5.69%; /* 51px / 896px */
             position: absolute;
@@ -36,15 +46,7 @@
             word-wrap: break-word;
         }
 
-        .backclick {
-            position: absolute;
-            width: 38px;
-            height: 38px;
-            left: 30px;
-            top: 5%;
-        }
-
-        .missionContainer {
+        .mainPage .missionContainer {
             width: 85.51%; /* 354px / 414px */
             height: 16.63%; /* 149px / 896px */
             left: 7.25%; /* 30px / 414px */
@@ -54,7 +56,16 @@
             border-radius: 30px;
         }
 
-        .introText {
+        .backclick {
+          /* arrow-left-circle */
+          position: absolute;
+          width: 38px;
+          height: 38px;
+          left: 30px;
+          top: 5%;
+        }
+
+        .mainPage .introText {
             width: 57.49%; /* 238px / 414px */
             left: 31.64%; /* 131px / 414px */
             top: 19.20%; /* 172px / 896px */
@@ -68,7 +79,7 @@
             word-wrap: break-word;
         }
 
-        .letterIcon {
+        .mainPage .letterIcon {
             width: 13.53%; /* 56px / 414px */
             height: 6.25%; /* 56px / 896px */
             left: 20%; 
@@ -76,7 +87,7 @@
             position: absolute;
         }
 
-        .guidelinesTitle {
+        .mainPage .guidelinesTitle {
             width: 78.50%; /* 325px / 414px */
             left: 10.63%; /* 44px / 414px */
             top: 35.83%; /* 321px / 896px */
@@ -90,7 +101,7 @@
             word-wrap: break-word;
         }
 
-        .materialsContainer {
+        .mainPage .materialsContainer {
             width: 85.51%; /* 354px / 414px */
             height: 39.84%; /* 357px / 896px */
             left: 7.25%; /* 30px / 414px */
@@ -98,7 +109,7 @@
             position: absolute;
         }
 
-        .materialsBorder {
+        .mainPage .materialsBorder {
             width: 100%;
             height: 102%;
             position: absolute;
@@ -106,7 +117,7 @@
             border: 1px #CDD5AE solid;
         }
 
-        .materialsText {
+        .mainPage .materialsText {
             width: 78.02%; /* 323px / 414px */
             height: 29.82%; /* 267.24px / 896px */
             left: 3.86%; /* 16px / 414px */
@@ -118,6 +129,28 @@
             word-wrap: break-word;
         }
 
+       .mainPage .startButtonContainer {
+            width: 90%; 
+            height: 6.70%; /* 60px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 78%; /* 690px / 896px */
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .startButtonText {
+            left: 40%;
+            top: 28%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.35vw; /* 18px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        } 
+
 
     </style>
 </head>
@@ -125,7 +158,7 @@
 <div class="mainPage">
     <div class="missionTitle">Photo Family Tree</div>
 
-    <a href="Today_Mission_list4.html">
+    <a href="Today_Mission_list.html">
       <div class="backclick">
         <img class="backclick" src="./HCI_image/back.png" />
       </div>
@@ -148,9 +181,29 @@
             <span style="color: #655753;">1. Enhancement of Family Unity<br/>2. Recording Family History<br/>3. Strengthening Emotional Connections within the Family</span>
         </div>
     </div>
-    <div class="startButtonContainer">
+    <a href="mission_page_Photo_Family_Tree1.html">
+      <div class="startButtonContainer">
         <div class="startButtonText">Start</div>
     </div>
+    </a>
+    
+
+    <!-- menuBar -->
+  <div class="menuBar">
+    <a href="index.html">
+      <img class="home" src="./HCI_image/bar_home.png" />
+    </a>
+    <a href="Today_Mission_list.html">
+      <img class="list" src="./HCI_image/bar_list_green.png" />
+    </a>
+    <a href="store_page_1.html">
+      <img class="market" src="./HCI_image/bar_market.png" />
+    </a>
+    <a href="mypage.html">
+      <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
+    </a>
+  </div>
+
 </div>
 </body>
 </html>
