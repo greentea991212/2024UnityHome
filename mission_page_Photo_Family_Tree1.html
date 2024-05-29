@@ -49,12 +49,13 @@
             word-wrap: break-word;
         }
 
-        .mainPage .backIcon {
-            width: 9.18%; /* 38px / 414px */
-            height: 4.24%; /* 38px / 896px */
-            left: 7.25%; /* 30px / 414px */
-            top: 5.13%; /* 46px / 896px */
-            position: absolute;
+        .mainPage .backclick {
+          /* arrow-left-circle */
+          position: absolute;
+          width: 35px;
+          height: 35px;
+          left: 10%;
+          top: 5%;
         }
 
         .mainPage .materialsContainer {
@@ -105,7 +106,7 @@
         }
 
         .pagination div {
-            width: 13%; 
+            width: 10%; 
             height: 100%;
             position: absolute;
             border-radius: 9999px;
@@ -129,20 +130,21 @@
 <body>
 <div class="mainPage">
     <a href="mission_page_Photo_Family_Tree1.html">
-        <div class="backIcon">
-            <img class="backIcon" src="./HCI_image/back.png" />
-        </div>
+      <div class="backclick">
+        <img class="backclick" src="./HCI_image/back.png" />
+      </div>
     </a>
+    
     <div class="stepTitle">Step 1<br>Preparation</div>
 
     <div class="materialsContainer">
-      <div class="materialsBorder" style="top: 49%;"></div>
+      <div class="materialsBorder" style="top: 52%;"></div>
       <div class="materialsText">
         <div class="introText">Gather photos of family members.<br>These can range from childhood to recent pictures.<br><br>Also, prepare the materials you will need to create the family tree, such as large paper or fabric, markers, glue, scissors, etc.</div>
       </div>
   </div>
 
-    <img class="letterIcon" src="HCI_image/tree.png" style="width: 57.97%; /* 240px / 414px */ height: auto; left: 19.32%; /* 80px / 414px */ top: 12.72%; /* 114px / 896px */ position: absolute;">
+    <img src="HCI_image/tree.png" style="width: 57.97%; height: auto; left: 19.32%;  top: 8%; position: absolute;">
     <a href="mission_page_Photo_Family_Tree2.html">
       <div class="nextButtonContainer">
         <div class="nextButtonText">Next</div>
