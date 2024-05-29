@@ -1,53 +1,181 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-    <div style="left: 148px; top: 56px; position: absolute; color: #34495E; font-size: 20px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">My Coupons</div>
-        <!-- Available -->
-        <div style="left: 35px; top: 128px; position: absolute; color: #34495E; font-size: 17px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Available</div>
-        <div style="width: 167px; height: 167px; left: 218px; top: 166px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px"></div>
-        <div style="width: 167px; height: 63.53px; left: 217px; top: 197px; position: absolute; background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%); border-radius: 10px"></div>
-        <a href="store_page_1.html">
-          <img style="width: 40px; height: 40px; left: 348px; top: 47px; position: absolute" src="./HCI_image/shopping_bag.png">
-        </a>
-        <div style="width: 167px; height: 167px; left: 32px; top: 165px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px"></div>
-        <div style="left: 41px; top: 285px; position: absolute; text-align: center; color: black; font-size: 9px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Up to 44% off the All-Day Ticket + <br/>Family Musical Mr. Rabbit package</div>
-        <img style="width: 113px; height: 113px; left: 59px; top: 165px; position: absolute; border-radius: 10px" src="./HCI_image/lotteworld_coupon.png">
-      
-        <div style="left: 232px; top: 284px; position: absolute; text-align: center; color: black; font-size: 11px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Shinsegae Gift Certificate <br/>50,000 won</div>
-        <img style="width: 167px; height: 68px; left: 218px; top: 200px; position: absolute; border-radius: 10px" src="./HCI_image/giftcard.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon Box</title>
+    <link rel="stylesheet" href="menuBar.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    <!-- Used -->
-    <div style="left: 35px; top: 390px; position: absolute; color: #34495E; font-size: 17px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">Used</div>
-    <div style="width: 167px; height: 167px; left: 29px; top: 431px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px"></div>
-    <div style="width: 111px; left: 57px; top: 541px; position: absolute; text-align: center; color: black; font-size: 11px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">OUTBACK LOVERS Seasonal Menu Coupons</div>
-    <img style="width: 167px; height: 68px; left: 33px; top: 455px; position: absolute; border-radius: 10px" src="./HCI_image/coupon1.png">
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: white"></div>
-  
-  
-  
-    <!--manu bar div-->
-  <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-    <a href="main.html">
-    <img style="width: 34px; height: 34px; left: 4.25px; top: 2.83px; position: absolute" src="./HCI_image/bar_home_green.png"
-    onclick="window.location.href='http://127.0.0.1:5500/main.html'">
-    <a href="Today_Mission_list4.html">
-      <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list.png">
-    </a>
+
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+        /* Adjustments for user image */
+        .mainPage img.shImage {
+            width: 7.25%; /* 30px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 85.27%; /* 353px / 414px */
+            top: 5.80%; /* 52px / 896px */
+            position: absolute;
+        }
+
+        /* Adjustments for titles */
+        .mainPage .title, .mainPage .mealCoupon, .mainPage .festivalCoupon {
+            position: absolute;
+            font-family: Montserrat;
+            word-wrap: break-word;
+        }
+
+        .mainPage .title {
+            left: 33.33%; /* 138px / 414px */
+            top: 6.13%; /* 55px / 896px */
+            color: black;
+            font-size: 4.80vw; /* 20px / 414px */
+            font-weight: 700;
+        }
+
+        .mainPage .mealCoupon, .mainPage .festivalCoupon {
+            left: 7.25%; /* 30px / 414px */
+            color: black;
+            font-size: 3.86vw; /* 17px / 414px */
+            font-weight: 600;
+        }
+
+        .mainPage .mealCoupon {
+            top: 15.03%; /* 135px / 896px */
+        }
+
+        .mainPage .festivalCoupon {
+            top: 45%; /* 367px / 896px */
+            color: #34495E;
+        }
+
+        /* Adjustments for coupon container */
+        .mainPage .couponContainer {
+            width: 85.75%; /* 355px / 414px */
+            height: 44.19%; /* 395px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 20.54%; /* 182px / 896px */
+            position: absolute;
+        }
+
+        /* Adjustments for individual coupons */
+        .mainPage .coupon {
+            width: 40.34%; /* 167px / 414px */
+            height: 50%; /* 167px / 896px */
+            background: white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            position: absolute;
+        }
+
+        .mainPage .coupon img {
+            width: auto; /* 167px / 414px */
+            height: 30%; /* 68px / 381px */
+            left: 5%;
+            top: 14.29%; /* 24px / 167px */
+            position: absolute;
+            border-radius: 10px;
+        }
+
+        .mainPage .coupon .couponText {
+            width: auto; /* 111px / 351px */
+            left: auto; /* 15% of parent width */
+            top: 60%; /* 60% of parent height */
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 2.66vw; /* 11px / 414px */
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        /* Adjustments for menu bar */
+        .mainPage .menuBar {
+            width: 100%; /* Adjusted to match the full width */
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #ffffff; /* Added background color */
+        }
+
+        .mainPage .menuBar a {
+            display: inline-block;
+        }
+
+        .mainPage .menuBar img {
+            width: 30px; /* Adjusted size */
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
     <a href="store_page_1.html">
-      <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png">
+      <img class="shImage" src="./HCI_image/shopping_bag.png">
+      <div class="title">My Coupon</div>
+      <div class="mealCoupon">Available</div>
+      <div class="festivalCoupon">Used</div>
+      <div class="couponContainer">
     </a>
-    <a href="mypage.html">
-    <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-    onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
-  </a>
-  </div>
-    <!--manu plus bar div-->
-    <div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-      <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-      <a href="Today_Mission_list4.html">
-        <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-          <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-          <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
+
+        <!-- 아웃백 쿠폰 -->
+            <div class="coupon" style="left: 5%; top: 65%;">
+                <img src="./HCI_image/coupon1.png" style="left: 50%;">
+                <div class="couponText" style="top: 75%;">OUTBACK LOVERS Seasonal Menu Coupons</div>
+            </div>
+        
+        <!-- 신세계 쿠폰 -->
+        <div class="coupon" style="left: 55%; top: 0;">
+            <img src="./HCI_image/giftcard.png" style="left: 50%;">
+            <div class="couponText" style="top: 75%; left: 5%;">Shinsegae Gift Certificate <br/>50,000 won</div>
         </div>
-      </a>
+
+        <!-- 롯데월드 쿠폰 -->
+        <div class="coupon" style="left: 5%">
+            <img src="./HCI_image/lotteworld_coupon.png" style="width: 50%; height: 50%; left: 50%; top: auto;">
+            <div class="couponText" style="top: 60%;">Up to 44% off the All-Day Ticket + <br/>Family Musical Mr. Rabbit package</div>
+        </div>
     </div>
+        <!-- menuBar -->
+    <div class="menuBar">
+        <a href="main.html">
+          <img class="home" src="./HCI_image/bar_home.png" />
+        </a>
+        <a href="Today_Mission_list.html">
+          <img class="list" src="./HCI_image/bar_list_green.png" />
+        </a>
+        <a href="store_page_1.html">
+          <img class="market" src="./HCI_image/bar_market.png" />
+        </a>
+        <a href="mypage.html">
+          <img style="width: 25px" class="my" src="./HCI_image/bar_my.png" />
+        </a>
+    </div>
+
 </div>
+</body>
+</html>

@@ -1,59 +1,170 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-    <img style="width: 414px; height: 896px; left: 0px; top: 0px; position: absolute" src="./HCI_image/cart_image.png">
-    <div style="width: 417px; height: 897px; left: -3px; top: -1px; position: absolute; background: rgba(0, 0, 0, 0.30)"></div>
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: white"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="menuBar.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    <div style="width: 38px; height: 38px; left: 30px; top: 46px; position: absolute">
-        <!-- back icon -->
-        <div style="width: 38px; height: 38px; left: 3.17px; top: 4.75px; position: absolute">
-          <img style="width: 34px; height: 34px; left: 0px; top: 4.75px; position: absolute" src="./HCI_image/back.png"
-          onclick="window.location.href='http://127.0.0.1:5500/store_page_2_cart.html'">
-        </div>  
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: -4%;
+        }
+
+        .overlay {
+            width: 417px;
+            height: 897px;
+            position: absolute;
+            left: -3px;
+            top: -1px;
+            background: rgba(0, 0, 0, 0.30);
+        }
+
+
+        .mainPage .backclick {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            left: 10%;
+            top: 5%;
+        }
+
+        .couponImageContainer {
+            width: 217.75px;
+            height: 217.75px;
+            position: absolute;
+            left: 21%;
+            top: 99px;
+            background: white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+
+        .couponImage {
+            width: 207px;
+            height: 88.67px;
+            position: absolute;
+            left: 52%;
+            top: 10%;
+            border-radius: 10px;
+        }
+
+        .couponText {
+            width: 172.15px;
+            position: absolute;
+            left: 11%;
+            top: 65%;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .pointImage {
+            width: 20px;
+            height: auto;
+            position: absolute;
+            left: 300px;
+            top: 600px;
+        }
+
+        .totalPrice {
+            position: absolute;
+            right: 30px;
+            top: 619px;
+            text-align: right;
+            color: black;
+            font-size: 22px;
+            font-family: Roboto;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .descrip {
+            position: absolute;
+            left: 48px;
+            top: 62%;
+            text-align: left;
+            color: black;
+            font-size: 15px;
+            font-family: Roboto;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        .checkoutButton {
+            width: 85.51%;
+            height: 6.70%;
+            left: 7.25%;
+            bottom: 10%;
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .checkoutButtonText {
+            left: 36%;
+            top: 25%;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.35vw;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+    <img src="./HCI_image/cart_image.png" alt="Cart Image">
+    <div class="overlay"></div>
+    <a href="store_page_2_cart.html">
+      <div class="backclick">
+        <img class="backclick" src="./HCI_image/back.png" />
       </div>
-      
-    <!--manu bar div-->
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-    <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-        <img style="width: 34px; height: 34px; left: 4.25px; top: 2.83px; position: absolute" src="./HCI_image/bar_home.png"
-        onclick="window.location.href='http://127.0.0.1:5500/main.html'">
-        <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list_green.png"
-        onclick="window.location.href='http://127.0.0.1:5500/Today_Mission_list4.html'">
-        <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png"
-        onclick="window.location.href='http://127.0.0.1:5500/store_page_1.html'">
-        <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-        onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
-    </div>
-    
-    <!--manu plus bar div-->
-    <div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-      <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-      <a href="Today_Mission_list4.html">
-        <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-          <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-          <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-        </div>
-      </a>
-    </div>
-    
-
+    </a>
 
     <!-- 구매창 -->
     <div style="width: 323px; height: 250px; left: 46px; top: 234px; position: absolute">
-      <div style="width: 323px; height: 250px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
+      <div style="width: 323px; height: 250px; left: -19px; top: 0px; position: absolute; background: white; border-radius: 20px"></div>
       <div style="width: 104px; left: 180px; top: 104px; position: absolute; text-align: right; color: black; font-size: 9px; font-family: Noto Sans KR; font-weight: 400; line-height: 13px; word-wrap: break-word">OUTBACK LOVERS Seasonal Menu Coupons</div>
-      <div style="width: 127px; height: 38px; left: 98px; top: 17px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Pretendard; font-weight: 700; line-height: 20px; word-wrap: break-word">Want to pay?</div>
+      <div style="width: 127px; height: 38px; left: 80px; top: 17px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Pretendard; font-weight: 700; line-height: 20px; word-wrap: break-word">Want to pay?</div>
       <div style="width: 98px; height: 38px; left: 35px; top: 146px; position: absolute; text-align: center; color: black; font-size: 13px; font-family: Noto Sans KR; font-weight: 700; line-height: 20px; word-wrap: break-word">Payment points</div>
       <div style="width: 89px; height: 38px; left: 36px; top: 93px; position: absolute; text-align: center; color: rgba(0, 0, 0, 0.35); font-size: 13px; font-family: Pretendard; font-weight: 400; line-height: 21px; word-wrap: break-word">Order Coupon</div>
       <div style="width: 250px; height: 0px; left: 36px; top: 81px; position: absolute; border: 1px #DADADA solid"></div>
       <div style="width: 37px; height: 15px; left: 244px; top: 161px; position: absolute; text-align: right; color: #FF6B18; font-size: 13px; font-family: Noto Sans KR; font-weight: 700; line-height: 21px; word-wrap: break-word">5,000</div>
-      <div style="width: 105px; height: 40px; left: 49px; top: 192px; position: absolute; background: #CDD5AE; border-radius: 12px"></div>
+      <div style="width: 105px; height: 40px; left: 30px; top: 192px; position: absolute; background: #CDD5AE; border-radius: 12px"></div>
       <a href="store_page_4_payment_complete.html">
-        <div style="width: 32px; height: 21px; left: 85px; top: 202px; position: absolute; text-align: center; color: white; font-size: 13px; font-family: Noto Sans KR; font-weight: 700; line-height: 21px; word-wrap: break-word">YES</div>
+        <div style="width: 32px; height: 21px; left: 67px; top: 202px; position: absolute; text-align: center; color: white; font-size: 13px; font-family: Noto Sans KR; font-weight: 700; line-height: 21px; word-wrap: break-word">YES</div>
       </a>
-      <div style="width: 105px; height: 40px; left: 175px; top: 192px; position: absolute; border-radius: 12px; border: 1px #655753 solid"></div>
+      <div style="width: 105px; height: 40px; left: 150px; top: 192px; position: absolute; border-radius: 12px; border: 1px #655753 solid"></div>
       <a href="store_page_2_cart.html">
-        <div style="width: 32px; height: 21px; left: 211px; top: 202px; position: absolute; text-align: center; color: #655753; font-size: 13px; font-family: Noto Sans KR; font-weight: 700; line-height: 21px; word-wrap: break-word">NO</div>
+        <div style="width: 32px; height: 21px; left: 188px; top: 202px; position: absolute; text-align: center; color: #655753; font-size: 13px; font-family: Noto Sans KR; font-weight: 700; line-height: 21px; word-wrap: break-word">NO</div>
       </a>    
     </div>
+
+    
   </div>

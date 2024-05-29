@@ -1,53 +1,194 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-    <div style="width: 13px; height: 14.03px; left: 316px; top: 626px; position: absolute">
-        <img style="width: 13px; height: 13px; left: 0px; top: 4.75px; position: absolute" src="./HCI_image/point_image.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="menuBar.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage img {
+            width: 73.67%;
+            height: auto;
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+
+        .title {
+            position: absolute;
+            left: 43%;
+            top: 51px;
+            text-align: center;
+            color: #34495E;
+            font-size: 22px;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .backclick {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            left: 10%;
+            top: 5%;
+        }
+
+        .couponImageContainer {
+            width: 217.75px;
+            height: 217.75px;
+            position: absolute;
+            left: 21%;
+            top: 99px;
+            background: white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+
+        .mainPage .couponImage {
+            width: 207px;
+            height: 88.67px;
+            position: absolute;
+            left: 52%;
+            top: 10%;
+            border-radius: 10px;
+        }
+
+        .mainPage .couponText {
+            width: 172.15px;
+            position: absolute;
+            left: 11%;
+            top: 65%;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .pointImage {
+          width: 5%;
+          height: auto;
+          left: 70%;
+          top: 70%;
+          position: absolute;
+        }
+
+        .mainPage .totalPrice {
+            position: absolute;
+            right: 33px;
+            top: 69.2%;
+            text-align: right;
+            color: black;
+            font-size: 22px;
+            font-family: Roboto;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .descrip {
+            position: absolute;
+            left: 48px;
+            top: 62%;
+            text-align: left;
+            color: black;
+            font-size: 15px;
+            font-family: Roboto;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+
+
+        .mainPage .checkoutButton {
+            width: 85.51%;
+            height: 6.70%;
+            left: 7.25%;
+            top: 77.01%;
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .checkoutButtonText {
+            left: 36%;
+            top: 25%;
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.35vw;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+  <a href="store_page_1.html">
+    <div class="backclick">
+      <img class="backclick" src="./HCI_image/back.png" />
+    </div>
+  </a>
+    <div class="pointImage">
+        <img src="./HCI_image/point_image.png" alt="Point Image">
     </div>
     
-    <div style="left: 333px; top: 620px; position: absolute; text-align: right; color: black; font-size: 22px; font-family: Roboto; font-weight: 700; word-wrap: break-word">5000</div>
-    <div style="left: 30px; top: 619px; position: absolute; color: black; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Total</div>
-    <div style="left: 30px; top: 555px; position: absolute; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; line-height: 25px; word-wrap: break-word">OUTBACK LOVERS<br/>Seasonal Menu Coupons</div>
+    <div class="descrip">OUTBACK LOVERS<br>Seasonal Menu Coupons</div>
+    <div class="totalPrice">5000</div>
+    <div class="totalPrice" style= "right: 75%;">Total</div>
+    <div class="title">Cart</div>
+  
+
+
+    <!-- Coupon image -->
+    <div class="couponImageContainer">
+        <img class="couponImage" src="./HCI_image/coupon1.png" alt="Coupon Image">
+        <div class="couponText">OUTBACK LOVERS Seasonal Menu Coupons</div>
+    </div>
+
+    <!-- Checkout button -->
     <a href="store_page_3_buy.html">
-        <div style="width: 354px; height: 60px; left: 30px; top: 690px; position: absolute; background: #CDD5AE; border-radius: 30px"></div>
+      <div class="checkoutButton">
+          <div class="checkoutButtonText">Checkout</div>
+      </div>
     </a>
-        <div style="left: 161px; top: 709px; position: absolute; text-align: center; color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Checkout</div>
 
-
-    <div style="left: 183px; top: 51px; position: absolute; text-align: center; color: #34495E; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Cart</div>
-    <div style="width: 38px; height: 38px; left: 30px; top: 46px; position: absolute">
-      <!-- back icon -->
-      <div style="width: 38px; height: 38px; left: 3.17px; top: 4.75px; position: absolute">
-        <img style="width: 34px; height: 34px; left: 0px; top: 4.75px; position: absolute" src="./HCI_image/back.png"
-        onclick="window.location.href='http://127.0.0.1:5500/store_page_1.html'">
-      </div>  
-    </div>
-
-
-     <!--manu bar div-->
-    <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-    <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-        <img style="width: 34px; height: 34px; left: 4.25px; top: 2.83px; position: absolute" src="./HCI_image/bar_home.png"
-        onclick="window.location.href='http://127.0.0.1:5500/main.html'">
-        <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list_green.png"
-        onclick="window.location.href='http://127.0.0.1:5500/Today_Mission_list4.html'">
-        <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png"
-        onclick="window.location.href='http://127.0.0.1:5500/store_page_1.html'">
-        <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-        onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
-    </div>
-    
-    <!--manu plus bar div-->
-    <div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-        <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-        <a href="Today_Mission_list4.html">
-          <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-            <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-            <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-          </div>
+      <!-- menuBar -->
+      <div class="menuBar">
+        <a href="main.html">
+          <img class="home" src="./HCI_image/bar_home.png" />
+        </a>
+        <a href="Today_Mission_list.html">
+          <img class="list" src="./HCI_image/bar_list_green.png" />
+        </a>
+        <a href="store_page_1.html">
+          <img class="market" src="./HCI_image/bar_market.png" />
+        </a>
+        <a href="mypage.html">
+          <img style="width: 25px" class="my" src="./HCI_image/bar_my.png" />
         </a>
       </div>
-        
-    <!-- 쿠폰 사진 -->
-    <div style="width: 217.75px; height: 217.75px; left: 93px; top: 99px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px"></div>
-    <img style="width: 207px; height: 88.67px; left: 25%; top: 13%; position: absolute; border-radius: 10px" src="./HCI_image/coupon1.png">
-    <div style="width: 172.15px; left: 28%; top: 27%; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">OUTBACK LOVERS Seasonal Menu Coupons</div>
-</div>
+  </div>
+</body>
+</html>        
