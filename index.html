@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <style>
-        body,
+            body,
         html {
             margin: 0;
             padding: 0;
@@ -121,7 +121,7 @@
                 <div class="input-box">
                     <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
-                <div class="button" onclick="document.getElementById('loginForm').submit()">Sign In</div>
+                <div class="button">Sign In</div>
                 <div id="errorMessage" class="error-message"></div>
             </form>
             <div class="sub-header"><a href="signin.html">Create account</a></div>
@@ -130,14 +130,18 @@
 </div>
 
 <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // 기본 제출 행동 방지
-    
-    // 여기에서 필요한 경우 사용자명과 비밀번호의 유효성을 검사할 수 있습니다.
+    document.querySelector('.button').addEventListener('click', function() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
 
-    // 유효한 경우, main.html 페이지로 이동
-    window.location.href = "main.html";
-});
+        // 여기에서 사용자명과 비밀번호를 확인합니다.
+        // 예제로 사용자명과 비밀번호가 'user123'과 'pass123'일 때 페이지를 이동합니다.
+        if (username === 'user123' && password === 'pass123') {
+            window.location.href = "main.html";
+        } else {
+            document.getElementById('errorMessage').innerText = "Invalid username or password.";
+        }
+    });
 </script>
 </body>
 </html>

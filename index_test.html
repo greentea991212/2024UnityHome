@@ -130,6 +130,11 @@
 </div>
 
 <script>
+    console.log("서버 시작 전");
+app.listen(port, () => {
+    console.log(`Server is listening at http://localhost:${port}`);
+});
+
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // 기본 제출 행동 방지
 

@@ -1,28 +1,28 @@
-// 서버 설정: server.js
 const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = 3000;
 
-// 사용자 데이터 (예시)
-const users = {
-  'testuser': 'password123'
-};
+// JSON 파싱을 위한 미들웨어 설정
+app.use(express.json());
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+// 사용자명과 비밀번호
+const validUsername = "user123";
+const validPassword = "pass123";
 
+// 로그인 요청 처리
 app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  if (users[username] && users[username] === password) {
-    res.redirect('/main.html'); // 로그인 성공 시 리디렉션
-  } else {
-    res.redirect('/?error=1'); // 로그인 실패 시 쿼리 파라미터와 함께 리디렉션
-  }
+    const { username, password } = req.body;
+
+    if (username === validUsername && password === validPassword) {
+        // 로그인 성공
+        res.status(200).json({ message: "Login successful" });
+    } else {
+        // 로그인 실패
+        res.status(401).json({ message: "Invalid username or password" });
+    }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+// 서버 시작
+app.listen(port, () => {
+    console.log(`Server is listening at http://localhost:${port}`);
 });
