@@ -24,13 +24,6 @@
             box-sizing: border-box;
         }
 
-        .mainPage.display {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
         .mainPage img {
             width: 73.67%; /* 305px / 414px */
             height: auto; /* Maintain aspect ratio */
@@ -40,148 +33,144 @@
             transform: translateX(-50%);
         }
 
-        .container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            box-sizing: border-box;
-            border-radius: 30px;
-            overflow: hidden;
-        }
-
-        .header {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .back-icon {
-            width: 34px;
-            height: 34px;
-            cursor: pointer;
-        }
-
-        .title {
-            color: #34495E;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .profile {
+        .mainPage .Title {
+            left: 39%; /* 144px / 414px */
+            top: 5.69%; /* 51px / 896px */
+            position: absolute;
             text-align: center;
+            color: #34495E;
+            font-size: 5.31vw; /* 22px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
         }
 
-        .profile-pic {
-            width: 80px;
-            height: 80px;
-            background: #CDD5AE;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .mainPage .backclick {
+          /* arrow-left-circle */
+          position: absolute;
+          width: 35px;
+          height: 35px;
+          left: 10%;
+          top: 5%;
         }
 
-        .profile-pic img {
-            width: 45px;
-            height: 45px;
-        }
-
-        .username {
-            margin-top: 10px;
+        .mainPage .introText {
+            width: 84.54%; /* 350px / 414px */
+            left: 7.73%; /* 32px / 414px */
+            top: 13.73%; /* 123px / 896px */
+            position: absolute;
+            text-align: center;
             color: black;
-            font-size: 20px;
-            font-weight: 500;
+            font-size: 3.38vw; /* 14px / 414px */
+            font-family: Roboto;
+            font-weight: 300;
+            line-height: 4.83vw; /* 20px / 414px */
+            word-wrap: break-word;
         }
 
-        .menu {
-            width: 90%;
-            margin: auto;
-        }
-
-        .menu-item {
-            width: 80%;
+        .mainPage .ButtonContainer {
+            position: absolute;
+            width: 325px;
             height: 66px;
+            left: 6%;
+            top: 323px;
+            position: absolute;
+            background: #717B85;
+            border-radius: 30px;
             background: rgba(196, 196, 196, 0.35);
             border-radius: 30px;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            text-decoration: none;
-            color: rgba(0, 0, 0, 0.50);
-            font-size: 18px;
-            font-weight: 500;
         }
 
-        .menu-item img {
-            height: 24px;
+        .mainPage .ButtonText {
+            left: 15%;
+            top: 28%;
+            position: absolute;
+            text-align: left;
+            color: rgb(70, 70, 70);
+            font-size: 4.35vw; /* 18px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;  
         }
 
-        .arrow {
-            opacity: 0.25;
+        .mainPage .membership{
+          /* Membership withdrawal */
+        position: absolute;
+        width: 200px;
+        height: 26px;
+        left: 30px;
+        top: 659px;
+
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 26px;
+        /* identical to box height, or 200% */
+        text-decoration-line: underline;
+
+        color: #717B85;
+
+
         }
 
-        .withdrawal {
-            text-align: center;
-            margin-bottom: 10px;
+        .mainPage .arrow{
+          width: 30px;
+          height: 30px;
+          left: 90%;
+          top: 10%;
         }
 
-        .withdrawal a {
-            color: #717B85;
-            font-size: 13px;
-            text-decoration: underline;
-            }
     </style>
 </head>
+<script>
+    // JavaScript for navigating back
+    function goBack() {
+        window.history.back();
+    }
+</script>
 <body>
-    <div class="mainPage display">
-        <div class="header">
-            <img src="back-icon.png" alt="Back" class="back-icon" onclick="window.history.back()">
-            <div class="title">My Page</div>
-        </div>
-        
-        <div class="profile">
-            <div class="profile-pic">
-                <img src="my-icon.png" alt="My Icon">
-            </div>
-            <div class="username">SKY Nam</div>
-        </div>
+<div class="mainPage">
+    <div class="Title">MY page</div>
 
-        <div class="menu">
-            <a href="couponbox.html" class="menu-item">
-              <img src="./HCI_image/arrow.png" alt="Arrow" class="arrow">
-              My Coupon Box
-                <img src="./HCI_image/arrow.png" alt="Arrow" class="arrow">
-            </a>
-            <a href="#" class="menu-item">
-                <img src="info-icon.png" alt="Info">
-                Modify personal information
-                <img src="./HCI_image/arrow.png" alt="Arrow" class="arrow">
-            </a>
-            <a href="#" class="menu-item">
-                <img src="inquiry-icon.png" alt="Inquiry">
-                1:1 Inquiry
-                <img src="./HCI_image/arrow.png" alt="Arrow" class="arrow">
-            </a>
-            <a href="#" class="menu-item">
-                <img src="settings-icon.png" alt="Settings">
-                Settings
-                <img src="./HCI_image/arrow.png" alt="Arrow" class="arrow">
-            </a>
-        </div>
-
-        <div class="withdrawal">
-            <a href="#">Membership withdrawal</a>
-        </div>
+    <div onclick="goBack()">
+      <div class="backclick">
+        <img class="backclick" src="./HCI_image/back.png" />
+      </div>
     </div>
-      <!-- menuBar -->
+    <img style="height: 50px; width: 50px; top: 17%;" src="./HCI_image/my_page_icon.png">
+    <div class="introText" style="top: 25%;">SKY Nam</div>
+
+ 
+
+    <a href="couponbox.html">
+        <div class="ButtonContainer" style="top: 30%;">
+          <img class="arrow" style="top: 25%;" src="./HCI_image/arrow.png">
+          <div class="ButtonText">My Coupon Box</div>
+        </div>
+    </a>
+
+    <div class="ButtonContainer" style="top: 42%;">
+      <img class="arrow" style="top: 25%;" src="./HCI_image/arrow.png">
+      <div class="ButtonText">Modify personal information</div>
+    </div>
+
+    <div class="ButtonContainer" style="top: 54%;">
+      <img class="arrow" style="top: 25%;" src="./HCI_image/arrow.png">
+        <div class="ButtonText">1:1 Inquiry</div>
+    </div>
+
+    <div class="ButtonContainer" style="top: 66%;">
+      <img class="arrow" style="top: 25%;" src="./HCI_image/arrow.png">
+      <div class="ButtonText">Settings</div>
+    </div>
+
+    <div class="membership" style="top: 78%;">Membership withdrawal</div>
+    
+  
+
+
+  <!-- menuBar -->
   <div class="menuBar">
     <a href="main.html">
       <img class="home" src="./HCI_image/bar_home.png" />
@@ -193,8 +182,12 @@
       <img class="market" src="./HCI_image/bar_market.png" />
     </a>
     <a href="mypage.html">
-      <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
+      <img style="width: 25px" class="my" src="./HCI_image/bar_my.png" />
     </a>
   </div>
+</div>
 </body>
 </html>
+
+
+
