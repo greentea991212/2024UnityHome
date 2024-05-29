@@ -24,40 +24,28 @@
         }
 
         .mainPage .stepTitle {
-            left: 31.64%; /* 131px / 414px */
-            top: 43.08%; /* 386px / 896px */
+            left: 33%; 
+            top: 43.08%;
             position: absolute;
             text-align: center;
             color: black;
-            font-size: 6.04vw; /* 25px / 414px */
+            font-size: 6.04vw; 
             font-family: Montserrat;
             font-weight: 700;
             word-wrap: break-word;
         }
 
         .mainPage .introText {
-            width: 78.50%; /* 325px / 414px */
-            left: 6.15%; /* 53px / 414px */
-            top: 55.58%; /* 498px / 896px */
+            width: 78.50%;
+            left: 12%; 
+            top: 55.58%; 
             position: absolute;
             text-align: center;
             color: black;
-            font-size: 3.62vw; /* 15px / 414px */
+            font-size: 3.62vw; 
             font-family: Roboto;
             font-weight: 400;
-            line-height: 5.31vw; /* 22px / 414px */
-            word-wrap: break-word;
-        }
-
-        .mainPage .nextButton {
-            left: 44.20%; /* 183px / 414px */
-            top: 91.41%; /* 819px / 896px */
-            position: absolute;
-            text-align: center;
-            color: #CDD5AE;
-            font-size: 4.83vw; /* 20px / 414px */
-            font-family: Montserrat;
-            font-weight: 500;
+            line-height: 5.31vw; 
             word-wrap: break-word;
         }
 
@@ -69,17 +57,55 @@
             position: absolute;
         }
 
+        .mainPage .materialsContainer {
+            width: 85.51%; /* 354px / 414px */
+            height: 39.84%; /* 357px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 34.26%; /* 307px / 896px */
+            position: absolute;
+        }
+
+        .mainPage .materialsBorder {
+            width: 100%;
+            height: 60%;
+            position: absolute;
+            border-radius: 30px;
+            border: 1px #CDD5AE solid;
+        }
+
+
+        .mainPage .nextButtonContainer {
+            width: 85%; 
+            height: 6.70%; /* 60px / 896px */
+            left: 7.5%; /* 30px / 414px */
+            top: 88%; /* 690px / 896px */
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .nextButtonText {
+            left: 43%;
+            top: 27%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.83vw; /* 20px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
 
         .mainPage .pagination {
             width: 28.02%; 
             height: 1.79%; 
             left: 36.23%; 
-            top: 73.45%; 
+            top: 82%; 
             position: absolute;
         }
 
         .pagination div {
-            width: 10%; /* 16px / 414px */
+            width: 13%; 
             height: 100%;
             position: absolute;
             border-radius: 9999px;
@@ -108,11 +134,23 @@
         </div>
     </a>
     <div class="stepTitle">Step 1<br>Preparation</div>
-    <div class="introText">Gather photos of family members.<br>These can range from childhood to recent pictures.<br><br>Also, prepare the materials you will need to create the family tree, such as large paper or fabric, markers, glue, scissors, etc.</div>
+
+    <div class="materialsContainer">
+      <div class="materialsBorder" style="top: 49%;"></div>
+      <div class="materialsText">
+        <div class="introText">Gather photos of family members.<br>These can range from childhood to recent pictures.<br><br>Also, prepare the materials you will need to create the family tree, such as large paper or fabric, markers, glue, scissors, etc.</div>
+      </div>
+  </div>
+
     <img class="letterIcon" src="HCI_image/tree.png" style="width: 57.97%; /* 240px / 414px */ height: auto; left: 19.32%; /* 80px / 414px */ top: 12.72%; /* 114px / 896px */ position: absolute;">
     <a href="mission_page_Photo_Family_Tree2.html">
-        <div class="nextButton">Next</div>
+      <div class="nextButtonContainer">
+        <div class="nextButtonText">Next</div>
+      </div>
     </a>
+
+
+
     <div class="pagination">
         <div class="active"></div>
         <div class="inactive"></div>
