@@ -1,27 +1,181 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-  <div style="width: 270px; height: 783px; left: 72px; top: 0px; position: absolute; background: white; box-shadow: 0px 5px 20px 8px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-  <div style="width: 414px; height: 783px; left: 0px; top: 0px; position: absolute; background: white"></div>
-  
-  <a href="mission_page_Stars_in_the_Night2.html" style="text-decoration: none;">
-    <div class="Next button" style="left: 183px; top: 819px; position: absolute; color: #CDD5AE; font-size: 20px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Next</div>
-  </a>
-  <div style="width: 325px; left: 53px; top: 516px; position: absolute; text-align: center; color: black; font-size: 15px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Family members venture outdoors to gaze at the sky and identify constellations. Flashlights or telescopes can be used for more detailed observations.</div>
-  
-  <!-- back icon -->
-  <div style="width: 38px; height: 38px; left: 30px; top: 46px; position: absolute">
-    <img style="width: 34px; height: 34px; left: 0px; top: 4.75px; position: absolute" src="./HCI_image/back.png" onclick="window.location.href='http://127.0.0.1:5500/mission_page_Stars_in_the_Night0.html'">
-  </div>
-  
-  <!-- 아래 페이지 넘어가는 icon -->
-  <div style="width: 116px; height: 16px; left: 150px; top: 658px; position: absolute">
-    <div style="width: 16px; height: 16px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-    <div style="width: 16px; height: 16px; left: 25px; top: 0px; position: absolute; background: #C4C4C4; border-radius: 9999px"></div>
-    <div style="width: 16px; height: 16px; left: 50px; top: 0px; position: absolute; background: #C4C4C4; border-radius: 9999px"></div>
-    <div style="width: 16px; height: 16px; left: 75px; top: 0px; position: absolute; background: #C4C4C4; border-radius: 9999px"></div>
-    <div style="width: 16px; height: 16px; left: 100px; top: 0px; position: absolute; background: #C4C4C4; border-radius: 9999px"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission_page_Stars_in_the_Night step1</title>
+    <link rel="stylesheet" href="menuBar.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage .stepTitle {
+            left: 20%; 
+            top: 43.08%;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 6.04vw; 
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .introText {
+            width: 78.50%;
+            left: 12%; 
+            top: 55.58%; 
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 3.62vw; 
+            font-family: Roboto;
+            font-weight: 400;
+            line-height: 5.31vw; 
+            word-wrap: break-word;
+        }
+
+
+        .mainPage .materialsContainer {
+            width: 85.51%; /* 354px / 414px */
+            height: 39.84%; /* 357px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 34.26%; /* 307px / 896px */
+            position: absolute;
+        }
+
+        .mainPage .materialsBorder {
+            width: 100%;
+            height: 45%;
+            position: absolute;
+            border-radius: 30px;
+            border: 1px #CDD5AE solid;
+        }
+
+        .mainPage .backButtonContainer {
+            width: 40%; 
+            height: 6.70%; 
+            left: 7.5%; 
+            top: 88%; 
+            position: absolute;
+            background: #d5c9ae;
+            border-radius: 30px;
+        }
+
+        .mainPage .backButtonText {
+            left: 38%;
+            top: 20%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.83vw; 
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+
+        .mainPage .nextButtonContainer {
+            width: 40%; 
+            height: 6.70%; 
+            left: 50%; 
+            top: 88%;
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .nextButtonText {
+            left: 35%;
+            top: 20%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.83vw;
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .pagination {
+            width: 28.02%; 
+            height: 1.79%; 
+            left: 36.23%; 
+            top: 82%; 
+            position: absolute;
+        }
+
+        .pagination div {
+            width: 10%; 
+            height: 100%;
+            position: absolute;
+            border-radius: 9999px;
+        }
+
+        .pagination .active {
+            background: #CDD5AE;
+        }
+
+        .pagination .inactive {
+            background: #C4C4C4;
+        }
+
+        .pagination div:nth-child(1) { left: 0; }
+        .pagination div:nth-child(2) { left: 21.55%; /* 25px / 116px */ }
+        .pagination div:nth-child(3) { left: 43.10%; /* 50px / 116px */ }
+        .pagination div:nth-child(4) { left: 64.66%; /* 75px / 116px */ }
+        .pagination div:nth-child(5) { left: 86.21%; /* 100px / 116px */ }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+  <div class="stepTitle">Step 1<br>Finding Constellations</div>
+    <div class="materialsContainer">
+      <div class="materialsBorder" style="top: 52%;"></div>
+      <div class="materialsText">
+        <div class="introText">Family members venture outdoors to gaze at the sky and identify constellations. Flashlights or telescopes can be used for more detailed observations.</div>
+      </div>
   </div>
 
-  <!-- Step1 -->
-  <div style="left: 63px; top: 386px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Step 1 <br/>Finding Constellations</div>
-  <img style="width: 200px; height: 200px; left: 107px; top: 134px; position: absolute" src="./HCI_image/star.png">
+    <img src="HCI_image/star.png" style="width: 57.97%; height: auto; left: 19.32%;  top: 8%; position: absolute;">
+    
+    <!-- 이전 페이지 넘어가는 icon -->
+    <a href="mission_page_Stars_in_the_Night0.html">
+      <div class="backButtonContainer">
+        <div class="backButtonText">Back</div>
+      </div>
+    </a>
+    
+    <!-- 다음 페이지 넘어가는 icon -->
+    <a href="mission_page_Stars_in_the_Night2.html">
+      <div class="nextButtonContainer">
+        <div class="nextButtonText">Next</div>
+      </div>
+    </a>
+
+
+
+    <div class="pagination">
+        <div class="active"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
+        <div class="inactive"></div>
+    </div>
 </div>
+</body>
+</html>

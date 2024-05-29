@@ -4,67 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stars in the Night</title>
+    <link rel="stylesheet" href="menuBar.css">
     <style>
-        .button {
-            cursor: pointer;
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        .mainPage .backclick {
+          /* arrow-left-circle */
+          position: absolute;
+          width: 35px;
+          height: 35px;
+          left: 10%;
+          top: 5%;
+        }
+
+        .mainPage .missionTitle {
+            left: 28%;
+            top: 5.69%; /* 51px / 896px */
+            position: absolute;
+            text-align: center;
+            color: #34495E;
+            font-size: 5.31vw; /* 22px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+
+        .mainPage .missionContainer {
+            width: 85.51%; /* 354px / 414px */
+            height: 16.63%; /* 149px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 12%; /* 128px / 896px */
+            position: absolute;
+            background: rgba(238, 231, 219, 0.35);
+            border-radius: 30px;
+        }
+
+        .mainPage .introText {
+            width: 57.49%; /* 238px / 414px */
+            left: 31.64%; /* 131px / 414px */
+            top: 13.5%; /* 172px / 896px */
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 3.14vw; /* 13px / 414px */
+            font-family: Roboto;
+            font-weight: 400;
+            line-height: 4.81vw; /* 20px / 414px */
+            word-wrap: break-word;
+        }
+
+        .mainPage .materialsContainer {
+            width: 85.51%; /* 354px / 414px */
+            height: 39.84%; /* 357px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 30%; /* 307px / 896px */
+            position: absolute;
+        }
+
+        .mainPage .materialsBorder {
+            width: 100%;
+            height: 123%;
+            position: absolute;
+            border-radius: 30px;
+            border: 1px #CDD5AE solid;
+        }
+
+        .mainPage .materialsText {
+            width: 90%; /* 323px / 414px */
+            height: 29.82%; /* 267.24px / 896px */
+            left: 3.86%; /* 16px / 414px */
+            top: 5%; /* 62.22px / 896px */
+            position: absolute;
+            font-size: 3.14vw; /* 13px / 414px */
+            font-family: Roboto;
+            line-height: 4.81vw; /* 20px / 414px */
+            word-wrap: break-word;
+        }
+
+        .mainPage .startButtonContainer {
+            width: 90%; 
+            height: 6.70%; /* 60px / 896px */
+            left: 5%; /* 30px / 414px */
+            top: 80%; /* 690px / 896px */
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .startButtonText {
+            left: 40%;
+            top: 28%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.35vw; /* 18px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .starIcon {
+            width: 13.53%; /* 56px / 414px */
+            height: 6.25%; /* 56px / 896px */
+            left: 20%; 
+            top: 17%; /* 172px / 896px */
+            position: absolute;
         }
     </style>
 </head>
 <body>
-    <div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-        <div style="left: 108px; top: 51px; position: absolute; text-align: center; color: #34495E; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Stars in the Night</div>
-        <div style="width: 38px; height: 38px; left: 30px; top: 46px; position: absolute">
-            <!-- back icon -->
-            <div style="width: 38px; height: 38px; left: 3.17px; top: 4.75px; position: absolute">
-                <img style="width: 34px; height: 34px; left: 0px; top: 0px; position: absolute" src="./HCI_image/back.png" onclick="window.location.href='http://127.0.0.1:5500/Today_Mission_list4.html'">
-            </div>    
+<div class="mainPage">
+    <div class="missionTitle">Stars in the Night</div>
+    <a href="Today_Mission_list.html">
+        <div class="backclick">
+          <img class="backclick" src="./HCI_image/back.png" />
         </div>
-    
-        <div style="width: 354px; height: 149px; left: 30px; top: 128px; position: absolute; background: rgba(238, 231, 219, 0.35); border-radius: 30px"></div>
-        <div style="width: 354px; height: 370px; left: 29px; top: 298px; position: absolute">
-            <div style="width: 354px; height: 370px; left: 0px; top: 0px; position: absolute">
-                <div style="width: 354px; height: 370px; left: 0px; top: 0px; position: absolute; border-radius: 30px; border: 1px #CDD5AE solid"></div>
-                <div style="width: 323px; height: 299.52px; left: 22px; top: 47px; position: absolute"><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 700; line-height: 20px; word-wrap: break-word">Materials: </span><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 400; line-height: 20px; word-wrap: break-word">Flashlight or portable telescope (optional), constellation map, mobile device, pens, large paper, optional constellation observation journal, outdoor blanket or chairs.<br/></span><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 700; line-height: 20px; word-wrap: break-word"><br/>Time: </span><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 400; line-height: 20px; word-wrap: break-word">Approximately 1.5 to 2 hours.<br/></span><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 700; line-height: 20px; word-wrap: break-word"><br/>Objectives: </span><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 400; line-height: 20px; word-wrap: break-word">Strengthen cooperation and teamwork, enhance family bonds, stimulate curiosity about nature and the universe.<br/></span><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 700; line-height: 20px; word-wrap: break-word"><br/>Effects: </span><span style="color: #655753; font-size: 13px; font-family: Roboto; font-weight: 400; line-height: 20px; word-wrap: break-word">Improve communication and cooperation skills, enhance family cohesion through shared experiences, broaden understanding and interest in nature and the universe.</span></div>
-            </div>
-            <div style="width: 325px; left: 15px; top: 15px; position: absolute; text-align: center; color: black; font-size: 17px; font-family: Roboto; font-weight: 700; line-height: 20px; word-wrap: break-word">Guidelines</div>
-        </div>
-        <div style="width: 238px; left: 126px; top: 152px; position: absolute; text-align: center; color: black; font-size: 13px; font-family: Roboto; font-weight: 400; line-height: 20px; word-wrap: break-word">This program aims to bring family members together to discover constellations, share interests, and strengthen family bonds through an enjoyable activity of stargazing.</div>
-        <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-        <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: white"></div>
-        <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute"></div>
-    
-        <div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-            <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-            <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-                <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-                <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-            </div>
-        </div>
-        
-        <!-- Start button 작동함-->
-    <a href="mission_page_Stars_in_the_Night1.html" style="text-decoration: none;">
-      <div class="button" id="startButton" style="width: 354px; height: 60px; left: 30px; top: 690px; position: absolute; background: #CDD5AE; border-radius: 30px; cursor: pointer;"></div>
-      <div style="left: 176px; top: 709px; position: absolute; text-align: center; color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">START</div>
-    </a>
-    <img style="width: 55px; height: 55px; left: 65px; top: 175px; position: absolute" src="./HCI_image/star.png" />
-    </div>
-
-    
-    <!-- menu bar div -->
-    <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-      <a href="main.html" style="position: absolute; left: 4.25px; top: 2.83px;">
-        <img style="width: 34px; height: 34px;" src="./HCI_image/bar_home.png">
       </a>
-    
-        <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list_green.png"
-        onclick="window.location.href='http://127.0.0.1:5500/Today_Mission_list4.html'">
-        <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png"
-        onclick="window.location.href='http://127.0.0.1:5500/store_page_1.html'">
-        <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-        onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
+    <div class="missionContainer"></div>
+    <div class="introText">This program aims to bring family members together to discover constellations, share interests, and strengthen family bonds through an enjoyable activity of stargazing.</div>
+    <div class="materialsContainer">
+        <div class="materialsBorder"></div>
+        <div class="materialsText">
+            <span style="color: black; font-weight: 700;">Materials</span>
+            <span style="color: black;">: Flashlight or portable telescope (optional), constellation map, mobile device, pens, large paper, optional constellation observation journal, outdoor blanket or chairs.<br/></span>
+            <span style="color: black; font-weight: 700;">Time</span>
+            <span style="color: black;">: Approximately 1.5 to 2 hours.<br/><br/></span>
+            <span style="colorf: black; font-weight: 700;">Objectives<br/></span>
+            <span style="color: black;">1. Strengthen cooperation and teamwork.<br/>2. Enhance family bonds.<br/>3. Stimulate curiosity about nature and the universe.<br/><br/></span>
+            <span style="color: black; font-weight: 700;">Effects<br/></span>
+            <span style="color: black;">1. Improve communication and cooperation skills.<br/>2. Enhance family cohesion through shared experiences.<br/>3. Broaden understanding and interest in nature and the universe.</span>
+        </div>
     </div>
-
-    <!-- Include the JavaScript file
-    <script src="script.js"></script> -->
+    <div class="startButtonContainer">
+        <a href="mission_page_Stars_in_the_Night1.html" style="text-decoration: none;">
+            <div class="startButton"></div>
+            <div class="startButtonText">START</div>
+        </a>
+    </div>
+    <img class="starIcon" src="./HCI_image/star.png" />
+    <!-- Menu Bar -->
+    <div class="menuBar">
+        <a href="main.html">
+            <img class="home" src="./HCI_image/bar_home.png" />
+        </a>
+        <a href="Today_Mission_list.html">
+            <img class="list" src="./HCI_image/bar_list_green.png" />
+        </a>
+        <a href="store_page_1.html">
+            <img class="market" src="./HCI_image/bar_market.png" />
+        </a>
+        <a href="mypage.html">
+            <img style="width: 25px" class="my" src="./HCI_image/bar_my.png" />
+        </a>
+    </div>
+</div>
 </body>
 </html>
+

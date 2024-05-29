@@ -1,54 +1,172 @@
-<div style="width: 414px; height: 896px; position: relative; background: white; border-radius: 30px; overflow: hidden">
-  <div style="left: 108px; top: 51px; position: absolute; text-align: center; color: #34495E; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Stars in the Night</div>
-  <!-- back icon -->
-  <div style="width: 38px; height: 38px; left: 30px; top: 46px; position: absolute">
-    <img style="width: 34px; height: 34px; left: 0px; top: 4.75px; position: absolute" src="./HCI_image/back.png"
-    onclick="window.location.href='http://127.0.0.1:5500/mission_page_Stars_in_the_Night4.html'">
-  </div>  
-
-  
-<!-- add picture -->
-  <div style="width: 354px; height: 380px; left: 34px; top: 144px; position: absolute; background: #EEE7DB; box-shadow: 0px 15px 18px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-  <div style="width: 354px; height: 60px; left: 30px; top: 690px; position: absolute; background: #CDD5AE; border-radius: 30px"></div>
- 
-  <a href="mission_Accomplished_page_Photo_Family_Tree copy.html"> 
-    <div style="left: 156px; top: 709px; position: absolute; text-align: center; color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Add Photo</div>
-  </a>
-  <!-- plus icon -->
-  <div style="width: 107.50px; height: 107.50px; left: 157px; top: 280px; position: absolute">
-    <div style="width: 107.50px; height: 107.50px; left: 0px; top: 0px; position: absolute; border-radius: 50%; border: 5px #CDD5AE solid;"></div>
-    <div style="width: 0px; height: 43px; left: 53.75px; top: 32.25px; position: absolute; border-radius: 15px; border: 5px #CDD5AE solid"></div>
-    <div style="width: 43px; height: 0px; left: 32.25px; top: 53.75px; position: absolute; border-radius: 15px; border: 5px #CDD5AE solid"></div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stars in the Night add photo</title>
+    <link rel="stylesheet" href="menuBar.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
 
-<!--manu bar div-->
-  <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: rgba(255, 255, 255, 0.75); box-shadow: 0px -4px 17px rgba(0, 0, 0, 0.25)"></div>
-  <div style="width: 414px; height: 98px; left: 0px; top: 798px; position: absolute; background: white"></div>
-  <div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
-  </div>
-<div style="width: 348px; height: 34px; left: 30px; top: 810px; position: absolute">
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
 
-  <a href="main.html">
-    <img style="width: 34px; height: 34px; left: 4.25px; top: 2.83px; position: absolute" src="./HCI_image/bar_home.png">
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        .mainPage .missionTitle {
+            left: 28%; 
+            top: 5.69%;
+            position: absolute;
+            text-align: center;
+            color: #34495E;
+            font-size: 5.31vw; 
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .backclick {
+          /* arrow-left-circle */
+          position: absolute;
+          width: 35px;
+          height: 35px;
+          left: 10%;
+          top: 5%;
+        }
+
+        .mainPage .missionContainer {
+            width: 85.51%; 
+            height: 55%; 
+            left: 7.25%; 
+            top: 16.07%; 
+            position: absolute;
+            background: #EEE7DB;
+            box-shadow: 0px 15px 18px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+        }
+
+        .mainPage .addPhotoContainer {
+            width: 85.51%; /* 354px / 414px */
+            height: 6.70%; /* 60px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 77.01%; /* 690px / 896px */
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .addPhotoText {
+            left: 36%;
+            top: 28%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.35vw; /* 18px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .plusIconContainer {
+            width: 25.97%; /* 107.50px / 414px */
+            height: 11.99%; /* 107.50px / 896px */
+            left: 35%; /* 157px / 414px */
+            top: 38%; /* 280px / 896px */
+            position: absolute;
+        }
+
+        .mainPage .plusIconBackground {
+            width: 85%;
+            height: 100%;
+            left: 13%;
+            top: px;
+            position: absolute;
+            border-radius: 50%;
+            border: 5px #CDD5AE solid;
+        }
+
+        .mainPage .plusIconVertical {
+            width: 0px;
+            height: 39.91%; /* 43px / 107.50px */
+            left: 60%;
+            top: 30%; /* 32.25px / 107.50px */
+            position: absolute;
+            border-radius: 15px;
+            border: 5px #CDD5AE solid;
+            transform: translateX(-50%);
+        }
+
+        .mainPage .plusIconHorizontal {
+            width: 39%; /* 43px / 107.50px */
+            height: 0px;
+            left: 36%; 
+            top: 55%;
+            position: absolute;
+            border-radius: 15px;
+            border: 5px #CDD5AE solid;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+  <a href="mission_page_Stars_in_the_Night5_add_photo.html">
+    <div class="backclick">
+      <img class="backclick" src="./HCI_image/back.png" />
+    </div>
   </a>
-  <a href="Today_Mission_list4.html">
-    <img style="width: 34px; height: 34px; left: 75px; top: 2.83px; position: absolute" src="./HCI_image/bar_list_green.png">
-  </a>
-  <a href="store_page_1.html">
-    <img style="width: 34px; height: 34px; left: 249px; top: 2.83px; position: absolute" src="./HCI_image/bar_market.png">
-  </a>
-  <img style="width: 34px; height: 34px; left: 326px; top: 2.83px; position: absolute" src="./HCI_image/bar_my.png"
-  onclick="window.location.href='http://127.0.0.1:5500/mypage.html'">
+    
+    <div class="missionTitle">Stars in the Niht</div>
+
+    <div class="missionContainer"></div>
+
+    <a href="mission_Accomplished_page_Stars_in_the_Night.html">
+        <div class="addPhotoContainer">
+            <div class="addPhotoText">Add Photo</div>
+        </div>
+    </a>
+
+    <div class="plusIconContainer">
+        <div class="plusIconBackground"></div>
+        <div class="plusIconVertical"></div>
+        <div class="plusIconHorizontal"></div>
+    </div>
+
+    <!-- menuBar -->
+    <div class="menuBar">
+        <a href="main.html">
+          <img class="home" src="./HCI_image/bar_home.png" />
+        </a>
+        <a href="Today_Mission_list.html">
+          <img class="list" src="./HCI_image/bar_list_green.png" />
+        </a>
+        <a href="store_page_1.html">
+          <img class="market" src="./HCI_image/bar_market.png" />
+        </a>
+        <a href="mypage.html">
+          <img style="width: 25px" class="my" src="./HCI_image/bar_my.png" />
+        </a>
+      </div>
 </div>
-
-<!--manu plus bar div-->
-<div style="width: 74px; height: 74px; left: 170px; top: 776px; position: absolute">
-  <div style="width: 74px; height: 74px; left: 0px; top: 0px; position: absolute; background: #CDD5AE; border-radius: 9999px"></div>
-  <div style="width: 52px; height: 52px; left: 11px; top: 11px; position: absolute">
-    <div style="width: 0px; height: 30.33px; left: 24px; top: 10.83px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-    <div style="width: 30.33px; height: 0px; left: 8.83px; top: 26px; position: absolute; border-radius: 15px; border: 2px white solid"></div>
-  </div>      
-</div>
-
-
+</body>
+</html>
