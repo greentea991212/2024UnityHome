@@ -49,14 +49,6 @@
             word-wrap: break-word;
         }
 
-        .mainPage .backclick {
-          /* arrow-left-circle */
-          position: absolute;
-          width: 35px;
-          height: 35px;
-          left: 10%;
-          top: 5%;
-        }
 
         .mainPage .materialsContainer {
             width: 85.51%; /* 354px / 414px */
@@ -74,24 +66,46 @@
             border: 1px #CDD5AE solid;
         }
 
+        .mainPage .backButtonContainer {
+            width: 40%; 
+            height: 6.70%; 
+            left: 7.5%; 
+            top: 88%; 
+            position: absolute;
+            background: #d5c9ae;
+            border-radius: 30px;
+        }
+
+        .mainPage .backButtonText {
+            left: 38%;
+            top: 20%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.83vw; 
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
 
         .mainPage .nextButtonContainer {
-            width: 85%; 
-            height: 6.70%; /* 60px / 896px */
-            left: 7.5%; /* 30px / 414px */
-            top: 88%; /* 690px / 896px */
+            width: 40%; 
+            height: 6.70%; 
+            left: 50%; 
+            top: 88%;
             position: absolute;
             background: #CDD5AE;
             border-radius: 30px;
         }
 
         .mainPage .nextButtonText {
-            left: 43%;
-            top: 27%; 
+            left: 35%;
+            top: 20%; 
             position: absolute;
             text-align: center;
             color: white;
-            font-size: 4.83vw; /* 20px / 414px */
+            font-size: 4.83vw;
             font-family: Montserrat;
             font-weight: 700;
             word-wrap: break-word;
@@ -129,14 +143,7 @@
 </head>
 <body>
 <div class="mainPage">
-    <a href="mission_page_Photo_Family_Tree1.html">
-      <div class="backclick">
-        <img class="backclick" src="./HCI_image/back.png" />
-      </div>
-    </a>
-    
-    <div class="stepTitle">Step 1<br>Preparation</div>
-
+  <div class="stepTitle">Step 1<br>Preparation</div>
     <div class="materialsContainer">
       <div class="materialsBorder" style="top: 52%;"></div>
       <div class="materialsText">
@@ -145,6 +152,15 @@
   </div>
 
     <img src="HCI_image/tree.png" style="width: 57.97%; height: auto; left: 19.32%;  top: 8%; position: absolute;">
+    
+    <!-- 이전 페이지 넘어가는 icon -->
+    <a href="mission_page_Photo_Family_Tree0.html">
+      <div class="backButtonContainer">
+        <div class="backButtonText">Back</div>
+      </div>
+    </a>
+    
+    <!-- 다음 페이지 넘어가는 icon -->
     <a href="mission_page_Photo_Family_Tree2.html">
       <div class="nextButtonContainer">
         <div class="nextButtonText">Next</div>
