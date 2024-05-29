@@ -1,108 +1,143 @@
 <!DOCTYPE html>
-
-<!-- 주석 -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UnityHome</title>
-    <link rel="stylesheet" href="menuBar.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
     <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-      .mainPage {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: white;
-        border-radius: 30px;
-        overflow: hidden;
-        box-sizing: border-box;
-      }
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
 
-      .mainPage img {
-        width: 73.67%; /* 305px / 414px */
-        height: auto; /* Maintain aspect ratio */
-        left: 50%;
-        top: 29%;
-        position: absolute;
-        transform: translateX(-50%);
-      }
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      .mainPage .title {
-        width: 71.01%; /* 294px / 414px */
-        left: 50%;
-        top: 17%;
-        position: absolute;
-        text-align: center;
-        color: #34495e;
-        font-size: 7.25vw; /* 30px / 414px */
-        font-family: Pretendard;
-        font-weight: 700;
-        line-height: 1.37;
-        transform: translateX(-50%);
-        word-wrap: break-word;
-      }
+        .form-container {
+            width: 100%;
+            max-width: 354px; /* 동일한 너비 */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-      .mainPage .todayMission {
-        width: 85.51%; /* 354px / 414px */
-        height: 6.7%; /* 60px / 896px */
-        left: 50%;
-        top: 77%;
-        position: absolute;
-        background: #cdd5ae;
-        border-radius: 30px;
-        transform: translateX(-50%);
-      }
+        .input-box {
+            width: 100%;
+            height: 66px;
+            margin-top: 20px;
+            background: rgba(196, 196, 196, 0.35);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
 
-      .mainPage .todayMissionText {
-        left: 50%;
-        top: 30%;
-        position: absolute;
-        text-align: center;
-        color: white;
-        font-size: 4.35vw; /* 18px / 414px */
-        font-family: Montserrat;
-        font-weight: 700;
-        transform: translateX(-50%);
-        word-wrap: break-word;
-      }
+        .input-box input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 20px;
+            font-family: Montserrat;
+            color: rgba(0, 0, 0, 0.50);
+        }
 
-      
+        .button {
+            width: 354px; /* 동일한 너비 */
+            height: 66px;
+            margin-top: 20px;
+            background: #CDD5AE;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 25px;
+            font-family: Montserrat;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .header {
+            text-align: center;
+            color: #34495E;
+            font-size: 30px; /* Increase font size */
+            font-family: Montserrat;
+            font-weight: 700;
+            margin-top: 10px; /* Move the header up */
+        }
+
+        .sub-header {
+            text-align: center;
+            color: #D6C7AA;
+            font-size: 13px;
+            font-family: Montserrat;
+            font-weight: 700;
+            margin-top: 5px; /* Move the sub-header up */
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            font-family: Montserrat;
+            font-weight: 700;
+            margin-top: 10px;
+        }
     </style>
-  </head>
-  <body>
-    <div class="mainPage">
-      <img src="./HCI_image/main_room.png" />
-      <div class="title">Our Family <br />Home</div>
-
-      <a href="Today_Mission_list.html">
-        <div class="todayMission">
-          <div class="todayMissionText">Today Mission</div>
+</head>
+<body>
+<div class="mainPage">
+    <div class="container">
+        <div class="form-container">
+            <div class="header">Sign In</div>
+            <div class="sub-header">For a happier home, sign up now!</div>
+            <form id="loginForm" action="/login" method="post">
+                <div class="input-box">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="button" onclick="document.getElementById('loginForm').submit()">Sign In</div>
+                <div id="errorMessage" class="error-message"></div>
+            </form>
+            <div class="sub-header"><a href="signin.html">Create account</a></div>
         </div>
-      </a>
-
-      <!-- menuBar -->
-      <div class="menuBar">
-        <a href="index.html">
-          <img class="home" src="./HCI_image/bar_home_green.png" />
-        </a>
-        <a href="Today_Mission_list.html">
-          <img class="list" src="./HCI_image/bar_list.png" />
-        </a>
-        <a href="store_page_1.html">
-          <img class="market" src="./HCI_image/bar_market.png" />
-        </a>
-        <a href="mypage.html">
-          <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
-        </a>
-      </div>
     </div>
-  </body>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // 기본 제출 행동 방지
+    
+    // 여기에서 필요한 경우 사용자명과 비밀번호의 유효성을 검사할 수 있습니다.
+
+    // 유효한 경우, main.html 페이지로 이동
+    window.location.href = "main.html";
+});
+</script>
+</body>
 </html>

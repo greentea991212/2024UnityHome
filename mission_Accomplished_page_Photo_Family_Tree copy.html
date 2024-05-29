@@ -42,3 +42,164 @@
   </a>
 </div>
 </div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree Mission Accomplished</title>
+    <link rel="stylesheet" href="menuBar.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .mainPage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .mainPage img {
+            width: 73.67%; /* 305px / 414px */
+            height: auto; /* Maintain aspect ratio */
+            left: 50%;
+            top: 29%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        .mainPage .backclick {
+          /* arrow-left-circle */
+          position: absolute;
+          width: 35px;
+          height: 35px;
+          left: 10%;
+          top: 5%;
+        }
+
+        .mainPage .title {
+            left: 33%; 
+            top: 5.69%;
+            position: absolute;
+            text-align: center;
+            color: #34495E;
+            font-size: 5.31vw; 
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .circle {
+            width: 60.14%; 
+            height: 35%; 
+            left: 19.81%;
+            top: 27.34%; 
+            position: absolute;
+            background: #CDD5AE;
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+        }
+
+        .mainPage .points {
+            left: 36%;
+            top: 35.83%; 
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 9.66vw; 
+            font-family: Pretendard;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .mainPage .description {
+            width: 78.5%; 
+            left: 11.59%; 
+            top: 65%;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 3.62vw; 
+            font-family: Roboto;
+            font-weight: 400;
+            line-height: 1.33; /* 20px / 15px */
+            word-wrap: break-word;
+        }
+
+        .mainPage .redeemButton {
+            width: 85.51%; /* 354px / 414px */
+            height: 6.70%; /* 60px / 896px */
+            left: 7.25%; /* 30px / 414px */
+            top: 77.01%; /* 690px / 896px */
+            position: absolute;
+            background: #CDD5AE;
+            border-radius: 30px;
+        }
+
+        .mainPage .redeemButtonText {
+            left: 22%; /* 95px / 414px */
+            top: 28%; /* 13px / 60px */
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 4.35vw; /* 18px / 414px */
+            font-family: Montserrat;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+    <a href="mission_page_loveletter2_add_photo.html">
+        <div class="backclick">
+          <img class="backclick" src="./HCI_image/back.png" />
+        </div>
+      </a>
+
+    <div class="title">Mission <br />Accomplished</div>
+
+    <div class="circle"></div>
+
+    <div class="points">50<br />Points</div>
+
+    <div class="description">You can purchase the items you need from the store using your accumulated points!</div>
+
+    <a href="store_page_1.html">
+        <div class="redeemButton">
+            <div class="redeemButtonText">Redeem Points at Store</div>
+        </div>
+    </a>
+    
+<!-- menuBar -->
+<div class="menuBar">
+    <a href="index.html">
+      <img class="home" src="./HCI_image/bar_home.png" />
+    </a>
+    <a href="Today_Mission_list.html">
+      <img class="list" src="./HCI_image/bar_list_green.png" />
+    </a>
+    <a href="store_page_1.html">
+      <img class="market" src="./HCI_image/bar_market.png" />
+    </a>
+    <a href="mypage.html">
+      <img style="width: 30px" class="my" src="./HCI_image/bar_my.png" />
+    </a>
+  </div>
+
+</div>
+</body>
+</html>
